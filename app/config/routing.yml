@@ -1,5 +1,5 @@
-account:
-    resource: "@AccountBundle/Controller/"
+main:
+    resource: "@mainBundle/Controller/"
     type:     annotation
     prefix:   /
 
