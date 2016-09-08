@@ -1,0 +1,5 @@
+account:
+    resource: "@AccountBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
