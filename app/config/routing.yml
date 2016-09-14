@@ -2,4 +2,27 @@ main:
     resource: "@mainBundle/Controller/"
     type:     annotation
     prefix:   /
+    
+account:
+    resource: "@AccountBundle/Controller/"
+    type:     annotation
+    
+    
+login:
+
+    path: /connexion
+
+    defaults:
+
+        _controller: AccountBundle:LogController
+
+login_check:
+
+    path: /login_check
+
+
+logout:
+
+    path: /logout
+    
 

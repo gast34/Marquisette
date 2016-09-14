@@ -1,24 +1,41 @@
-# To get started with security, check out the documentation:
-# http://symfony.com/doc/current/book/security.html
+# app/config/security.yml
+
 security:
+  encoders:
+    Symfony\Component\Security\Core\User\User: plaintext
+    AccountBundle\Entity\User : plaintext
+    
+  role_hierarchy:
 
-    # http://symfony.com/doc/current/book/security.html#where-do-users-come-from-user-providers
-    providers:
-        in_memory:
-            memory: ~
+        # Un admin hérite des droits d'auteur et de modérateur
 
-    firewalls:
-        # disables authentication for assets and the profiler, adapt it according to your needs
-        dev:
-            pattern: ^/(_(profiler|wdt)|css|images|js)/
-            security: false
+        ROLE_ADMIN:       [ROLE_AUTEUR, ROLE_MODERATEUR]
 
-        main:
-            anonymous: ~
-            # activate different ways to authenticate
+        # On garde ce rôle superadmin, il nous resservira par la suite
 
-            # http_basic: ~
-            # http://symfony.com/doc/current/book/security.html#a-configuring-how-your-users-will-authenticate
+        ROLE_SUPER_ADMIN: [ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH]
 
-            # form_login: ~
-            # http://symfony.com/doc/current/cookbook/security/form_login_setup.html
+
+
+ 
+  providers:
+        user_db:
+            entity: { class: AccountBundle\Entity\User, property: username}
+        
+        
+  firewalls:
+      
+    main:
+      pattern:      ^/
+      anonymous:    true
+      form_login:
+        default_target_path: /Marquis
+        login_path: /connexion
+        check_path: /login_check
+      logout:
+        path:       /logout
+        target:     /Marquis
+
+  access_control:
+
+      #- { path: ^/connexion, roles: IS_AUTHENTICATED_ANONYMOUSLY, requires_channel: https }
