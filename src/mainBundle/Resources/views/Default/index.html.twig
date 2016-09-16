@@ -9,22 +9,25 @@
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
             <!-- Import de Bootstrap.js -->
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-            <link rel="stylesheet" href="main.css">
+            <link rel="stylesheet" href="../main.css">
             <!-- Import du fichier JS principal -->
-            <script type="text/javascript" src="script/main.js"></script>
+            <script type="text/javascript" src="../script/main.js"></script>
     </head>
     <body>
 
-        <a href ="connexion">Connexion</a>
-        <a href ="logout">Deconnexion</a>
+        
+        {%if app.user.username is defined %}<a href ="logout">Deconnexion</a>  
+        {%else%}<a href ="connexion">Connexion</a>
+        {%endif%}
+        
 
 <!-- DEBUT DE LA PAGE DE DEMANDE +18 ________________________________________-->
       <header class="container">
             <div class="marg-title">
               <!-- image du logo -->
-                <img class="img-responsive img-majeur" src="img/marquisette_logo.png" alt="" />
+                <img class="img-responsive img-majeur" src="../img/marquisette_logo.png" alt="" />
               <!-- image majeur +18 -->
-                <img class="img-responsive img-logo" src="img/majeur_marquisette.png" alt="" />
+                <img class="img-responsive img-logo" src="../img/majeur_marquisette.png" alt="" />
                   <h2 class="center">
                     <a class="js-scrollTo" id="yess" href="#navigation">OUI</a>
                     <span class="textred">|</span>
@@ -81,7 +84,7 @@
        </div>
 
        <div class="container" id="manif">
-         <img class="img-responsive manif" src="img/manif.jpg" alt="" />
+         <img class="img-responsive manif" src="../img/manif.jpg" alt="" />
        </div>
 
        <div class="container" id="qui">

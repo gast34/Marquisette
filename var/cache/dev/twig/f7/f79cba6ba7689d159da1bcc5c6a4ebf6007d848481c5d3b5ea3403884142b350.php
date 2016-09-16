@@ -16,49 +16,45 @@ class __TwigTemplate_a8f145defeea017a6baf722fad4199ec815e40b4506b07ecf6be03d533c
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_c64955e6352a5d2d2d4eb271c4d403ae5958e1e40d83ceb02a604fdb49c019e8 = $this->env->getExtension("native_profiler");
-        $__internal_c64955e6352a5d2d2d4eb271c4d403ae5958e1e40d83ceb02a604fdb49c019e8->enter($__internal_c64955e6352a5d2d2d4eb271c4d403ae5958e1e40d83ceb02a604fdb49c019e8_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "AccountBundle:Default:login.html.twig"));
+        $__internal_206a201ce3ea7541dc08e0429356c464657936cee6c738be187f4bde5d3aa915 = $this->env->getExtension("native_profiler");
+        $__internal_206a201ce3ea7541dc08e0429356c464657936cee6c738be187f4bde5d3aa915->enter($__internal_206a201ce3ea7541dc08e0429356c464657936cee6c738be187f4bde5d3aa915_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "AccountBundle:Default:login.html.twig"));
 
-        // line 2
-        echo "test
-
-";
-        // line 4
+        // line 1
         $this->displayBlock('body', $context, $blocks);
         
-        $__internal_c64955e6352a5d2d2d4eb271c4d403ae5958e1e40d83ceb02a604fdb49c019e8->leave($__internal_c64955e6352a5d2d2d4eb271c4d403ae5958e1e40d83ceb02a604fdb49c019e8_prof);
+        $__internal_206a201ce3ea7541dc08e0429356c464657936cee6c738be187f4bde5d3aa915->leave($__internal_206a201ce3ea7541dc08e0429356c464657936cee6c738be187f4bde5d3aa915_prof);
 
     }
 
     public function block_body($context, array $blocks = array())
     {
-        $__internal_7f5ac835ff3d917d2698e429dd7eddb3645ac2d782655afc815c3d772db72258 = $this->env->getExtension("native_profiler");
-        $__internal_7f5ac835ff3d917d2698e429dd7eddb3645ac2d782655afc815c3d772db72258->enter($__internal_7f5ac835ff3d917d2698e429dd7eddb3645ac2d782655afc815c3d772db72258_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_a39e21b035aa0f191e3538bc19b1f8e6050cda5c8902af9846940fb3c9d41771 = $this->env->getExtension("native_profiler");
+        $__internal_a39e21b035aa0f191e3538bc19b1f8e6050cda5c8902af9846940fb3c9d41771->enter($__internal_a39e21b035aa0f191e3538bc19b1f8e6050cda5c8902af9846940fb3c9d41771_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
-        // line 5
+        // line 2
         echo "    
     <body>
 
   ";
-        // line 9
+        // line 6
         echo "  ";
         if ((isset($context["error"]) ? $context["error"] : $this->getContext($context, "error"))) {
-            // line 10
+            // line 7
             echo "    <div class=\"alert alert-danger\">";
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["error"]) ? $context["error"] : $this->getContext($context, "error")), "message", array()), "html", null, true);
             echo "</div>
   ";
         }
-        // line 12
+        // line 9
         echo "
   ";
-        // line 14
+        // line 11
         echo "  <form action=\"";
         echo $this->env->getExtension('routing')->getPath("login_check");
         echo "\" method=\"post\">
     <label for=\"username\">Login :</label>
     <input type=\"text\" id=\"username\" name=\"_username\" value=\"";
-        // line 16
+        // line 13
         echo twig_escape_filter($this->env, (isset($context["last_username"]) ? $context["last_username"] : $this->getContext($context, "last_username")), "html", null, true);
         echo "\" />
 
@@ -72,7 +68,7 @@ class __TwigTemplate_a8f145defeea017a6baf722fad4199ec815e40b4506b07ecf6be03d533c
 
 ";
         
-        $__internal_7f5ac835ff3d917d2698e429dd7eddb3645ac2d782655afc815c3d772db72258->leave($__internal_7f5ac835ff3d917d2698e429dd7eddb3645ac2d782655afc815c3d772db72258_prof);
+        $__internal_a39e21b035aa0f191e3538bc19b1f8e6050cda5c8902af9846940fb3c9d41771->leave($__internal_a39e21b035aa0f191e3538bc19b1f8e6050cda5c8902af9846940fb3c9d41771_prof);
 
     }
 
@@ -83,12 +79,9 @@ class __TwigTemplate_a8f145defeea017a6baf722fad4199ec815e40b4506b07ecf6be03d533c
 
     public function getDebugInfo()
     {
-        return array (  62 => 16,  56 => 14,  53 => 12,  47 => 10,  44 => 9,  39 => 5,  27 => 4,  23 => 2,);
+        return array (  58 => 13,  52 => 11,  49 => 9,  43 => 7,  40 => 6,  35 => 2,  23 => 1,);
     }
 }
-/* {# empty Twig template #}*/
-/* test*/
-/* */
 /* {% block body %}*/
 /*     */
 /*     <body>*/
