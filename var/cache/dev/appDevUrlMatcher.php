@@ -105,17 +105,19 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return array (  '_controller' => 'mainBundle\\Controller\\DefaultController::indexAction',  '_route' => 'Marquis',);
         }
 
-        if (0 === strpos($pathinfo, '/connexion')) {
-            // account_log_connec
-            if ($pathinfo === '/connexion') {
-                return array (  '_controller' => 'AccountBundle\\Controller\\LogController::connecAction',  '_route' => 'account_log_connec',);
-            }
+        // account_log_connec
+        if ($pathinfo === '/connexion') {
+            return array (  '_controller' => 'AccountBundle\\Controller\\LogController::connecAction',  '_route' => 'account_log_connec',);
+        }
 
-            // login
-            if ($pathinfo === '/connexion') {
-                return array (  '_controller' => 'AccountBundle:LogController',  '_route' => 'login',);
-            }
+        // account_log_gestion
+        if ($pathinfo === '/gestion') {
+            return array (  '_controller' => 'AccountBundle\\Controller\\LogController::gestionAction',  '_route' => 'account_log_gestion',);
+        }
 
+        // login
+        if ($pathinfo === '/connexion') {
+            return array (  '_controller' => 'AccountBundle:LogController',  '_route' => 'login',);
         }
 
         if (0 === strpos($pathinfo, '/log')) {

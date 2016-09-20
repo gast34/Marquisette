@@ -15,8 +15,8 @@ class __TwigTemplate_deb6de7a10dc8757dfde59740fd151f5e96ee2def3e080718fc5fee1502
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_34819ca8304f470a5302598e4a3917e824c37af17895977a95b11730d81f8fec = $this->env->getExtension("native_profiler");
-        $__internal_34819ca8304f470a5302598e4a3917e824c37af17895977a95b11730d81f8fec->enter($__internal_34819ca8304f470a5302598e4a3917e824c37af17895977a95b11730d81f8fec_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "mainBundle:Default:index.html.twig"));
+        $__internal_93029504720aa4e9c907bd7428dd38885b30efd05d5767bcfc25c4adf73451e7 = $this->env->getExtension("native_profiler");
+        $__internal_93029504720aa4e9c907bd7428dd38885b30efd05d5767bcfc25c4adf73451e7->enter($__internal_93029504720aa4e9c907bd7428dd38885b30efd05d5767bcfc25c4adf73451e7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "mainBundle:Default:index.html.twig"));
 
         // line 1
         echo "<html>
@@ -40,7 +40,9 @@ class __TwigTemplate_deb6de7a10dc8757dfde59740fd151f5e96ee2def3e080718fc5fee1502
         ";
         // line 19
         if ($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : null), "user", array(), "any", false, true), "username", array(), "any", true, true)) {
-            echo "<a href =\"logout\">Deconnexion</a>  
+            echo "Bonjour ";
+            echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "user", array()), "username", array()), "html", null, true);
+            echo " <a href =\"logout\">Deconnexion</a><a href =\"gestion\">Gestion</a>  
         ";
         } else {
             // line 20
@@ -211,7 +213,7 @@ class __TwigTemplate_deb6de7a10dc8757dfde59740fd151f5e96ee2def3e080718fc5fee1502
 
 ";
         
-        $__internal_34819ca8304f470a5302598e4a3917e824c37af17895977a95b11730d81f8fec->leave($__internal_34819ca8304f470a5302598e4a3917e824c37af17895977a95b11730d81f8fec_prof);
+        $__internal_93029504720aa4e9c907bd7428dd38885b30efd05d5767bcfc25c4adf73451e7->leave($__internal_93029504720aa4e9c907bd7428dd38885b30efd05d5767bcfc25c4adf73451e7_prof);
 
     }
 
@@ -227,7 +229,7 @@ class __TwigTemplate_deb6de7a10dc8757dfde59740fd151f5e96ee2def3e080718fc5fee1502
 
     public function getDebugInfo()
     {
-        return array (  51 => 22,  47 => 20,  42 => 19,  22 => 1,);
+        return array (  53 => 22,  49 => 20,  42 => 19,  22 => 1,);
     }
 }
 /* <html>*/
@@ -248,7 +250,7 @@ class __TwigTemplate_deb6de7a10dc8757dfde59740fd151f5e96ee2def3e080718fc5fee1502
 /*     <body>*/
 /* */
 /*         */
-/*         {%if app.user.username is defined %}<a href ="logout">Deconnexion</a>  */
+/*         {%if app.user.username is defined %}Bonjour {{app.user.username}} <a href ="logout">Deconnexion</a><a href ="gestion">Gestion</a>  */
 /*         {%else%}<a href ="connexion">Connexion</a>*/
 /*         {%endif%}*/
 /*         */

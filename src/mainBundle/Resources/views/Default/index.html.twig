@@ -16,7 +16,7 @@
     <body>
 
         
-        {%if app.user.username is defined %}<a href ="logout">Deconnexion</a>  
+        {%if app.user.username is defined %}Bonjour {{app.user.username}} <a href ="logout">Deconnexion</a><a href ="gestion">Gestion</a>  
         {%else%}<a href ="connexion">Connexion</a>
         {%endif%}
         
