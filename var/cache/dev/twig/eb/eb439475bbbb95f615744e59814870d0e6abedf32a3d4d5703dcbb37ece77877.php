@@ -15,8 +15,8 @@ class __TwigTemplate_deb6de7a10dc8757dfde59740fd151f5e96ee2def3e080718fc5fee1502
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_93029504720aa4e9c907bd7428dd38885b30efd05d5767bcfc25c4adf73451e7 = $this->env->getExtension("native_profiler");
-        $__internal_93029504720aa4e9c907bd7428dd38885b30efd05d5767bcfc25c4adf73451e7->enter($__internal_93029504720aa4e9c907bd7428dd38885b30efd05d5767bcfc25c4adf73451e7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "mainBundle:Default:index.html.twig"));
+        $__internal_bb9df43f7862213eec33d7ba660c4e732be198b8cb741b20d4fa472edc637829 = $this->env->getExtension("native_profiler");
+        $__internal_bb9df43f7862213eec33d7ba660c4e732be198b8cb741b20d4fa472edc637829->enter($__internal_bb9df43f7862213eec33d7ba660c4e732be198b8cb741b20d4fa472edc637829_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "mainBundle:Default:index.html.twig"));
 
         // line 1
         echo "<html>
@@ -29,6 +29,9 @@ class __TwigTemplate_deb6de7a10dc8757dfde59740fd151f5e96ee2def3e080718fc5fee1502
             <!-- Import de Jquery -->
             <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js\"></script>
             <!-- Import de Bootstrap.js -->
+            <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css\">
+            <script type='text/javascript' language='javascript' src='../script/disclaimer.js'></script>
+            <script src=\"https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js\"></script>
             <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js\"></script>
             <link rel=\"stylesheet\" href=\"../main.css\">
             <!-- Import du fichier JS principal -->
@@ -38,46 +41,37 @@ class __TwigTemplate_deb6de7a10dc8757dfde59740fd151f5e96ee2def3e080718fc5fee1502
 
         
         ";
-        // line 19
+        // line 22
         if ($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : null), "user", array(), "any", false, true), "username", array(), "any", true, true)) {
             echo "Bonjour ";
             echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "user", array()), "username", array()), "html", null, true);
             echo " <a href =\"logout\">Deconnexion</a><a href =\"gestion\">Gestion</a>  
         ";
         } else {
-            // line 20
+            // line 23
             echo "<a href =\"connexion\">Connexion</a>
         ";
         }
-        // line 22
+        // line 25
         echo "        
 
-<!-- DEBUT DE LA PAGE DE DEMANDE +18 ________________________________________-->
-      <header class=\"container\">
-            <div class=\"marg-title\">
-              <!-- image du logo -->
-                <img class=\"img-responsive img-majeur\" src=\"../img/marquisette_logo.png\" alt=\"\" />
-              <!-- image majeur +18 -->
-                <img class=\"img-responsive img-logo\" src=\"../img/majeur_marquisette.png\" alt=\"\" />
-                  <h2 class=\"center\">
-                    <a class=\"js-scrollTo\" id=\"yess\" href=\"#navigation\">OUI</a>
-                    <span class=\"textred\">|</span>
-                    <a href=\"#\">NON</a>
-                  </h2>
-            </div>
-      </header>
-      <!-- FIN DE LA PAGE DE DEMANDE +18 ____________________________________-->
+<html>
+
+    <body>
 
      <nav id = \"navi\">
             <ul>
                <a class=\"js-scrollTo\" href = \".hist\">
-                 <span class=\"dot bulle1\"></span>
+                 <span class=\"dot bulle1\">
+                 </span>
                </a>
                    <a class=\"js-scrollTo\" href = \"#manif\">
-                     <span class=\"dot bulle1-1\"></span>
+                     <span class=\"dot bulle1-1\">
+                     </span>
                    </a>
                    <a class=\"js-scrollTo\" href = \"#qui\">
-                     <span class=\"dot bulle1-2\"></span>
+                     <span class=\"dot bulle1-2\">
+                     </span>
                    </a>
               <a class=\"js-scrollTo\" href = \".prod\">
                 <span class=\"dot bulle2\"></span>
@@ -113,50 +107,65 @@ class __TwigTemplate_deb6de7a10dc8757dfde59740fd151f5e96ee2def3e080718fc5fee1502
 
          </div>
        </div>
-
+<!-- manifest -->
        <div class=\"container\" id=\"manif\">
-         <img class=\"img-responsive manif\" src=\"../img/manif.jpg\" alt=\"\" />
-       </div>
 
+        <div class=\"center\">
+          <img class=\"\" src=\"../img/marquisette_logo.png\" alt=\"logo\" />
+        </div>
+
+         <div class=\"marge-img wow bounceInLeft col-xs-offset-4 col-xs-4\"><img class=\"img-responsive\" src=\"../img/manif0.png\" alt=\"\" /></div>
+
+         <div class=\"marge-img wow bounceInRight col-xs-offset-2 col-xs-8\"><img class=\"img-responsive\" src=\"../img/manif1.png\" alt=\"\" /></div>
+
+         <div class=\"marge-img wow bounceInLeft col-xs-offset-2 col-xs-8\"><img class=\"img-responsive\" src=\"../img/manif2.png\" alt=\"\" /></div>
+
+         <div class=\"marge-img wow bounceInRight col-xs-offset-2 col-xs-8\"><img class=\"img-responsive\" src=\"../img/manif3.png\" alt=\"\" /></div>
+
+         <div class=\"marge-img wow bounceInLeft col-xs-offset-2 col-xs-8\"><img class=\"img-responsive\" src=\"../img/manif4.png\" alt=\"\" /></div>
+
+         <div class=\"marge-img wow bounceInRight col-xs-offset-2 col-xs-8\"><img class=\"img-responsive\" src=\"../img/manif5.png\" alt=\"\" /></div>
+
+         <div class=\"marge-img wow bounceInLeft col-xs-offset-2 col-xs-8\"><img class=\"img-responsive\" src=\"../img/manif6.png\" alt=\"\" /></div>
+
+         <div class=\"marge-img wow bounceInRight col-xs-offset-2 col-xs-8\"><img class=\"img-responsive\" src=\"../img/manif7.png\" alt=\"\" /></div>
+
+         <div class=\"marge-img wow bounceInLeft col-xs-offset-2 col-xs-8\"><img class=\"img-responsive\" src=\"../img/manif8.png\" alt=\"\" /></div>
+
+         <div class=\"marge-img wow bounceInRight col-xs-offset-2 col-xs-8\"><img class=\"img-responsive\" src=\"../img/manif9.png\" alt=\"\" /></div>
+
+         <div class=\"marge-img wow bounceInRight col-xs-offset-4 col-xs-4\"><img class=\"img-responsive\" src=\"../img/manif10.png\" alt=\"\" /></div>
+
+
+       </div>
+<!-- qui sommes nous -->
        <div class=\"container\" id=\"qui\">
-        <h1 class=\"center\">Qui sommes nous ?</h1>
-       </div>
+           <h1 class=\"titles center\">Qui sommes nous ?</h1>
+
+           <div class=\"col-xs-offset-2 col-xs-3\"><img class=\"img-responsive\" src=\"../img/qui1.png\" alt=\"\" /></div>
+           <div class=\"col-xs-5\"><img class=\"img-responsive\" src=\"../img/marquisette_logo.png\" alt=\"\" /></div>
+
+        </div>
 
 
-
-       <div class=\"container prod\">
-        <h1 class=\"center\">Produit</h1>
-          <div class=\"col-lg-2\"></div>
-            <p class=\"col-lg-8\">
+       <div class=\"container prod \">
+          <div class=\"col-xs-offset-2 col-xs-8\">
+            <h1 class=\"titles center\">Produit</h1>
+            <p class=\"\">
               Boisson du sud de la France, la marquisette est connue dans des départements tels que l'Ardèche, la Drôme et le Gard. Originaires de l'Ardèche, les petits enfants Thibon ont connu la marquisette dans les bals d'été, les mariages, les baptêmes... Il existe autant de recettes que de villages. La recette traditionnelle de leur grand père, n'était autre qu'un subtil mélange de vin blanc, de vin pétillant, de limonade, aux senteurs d'agrumes et de rhum.La Marquisette Cesar Thibon est disponible en bouteille de 25 et 75cl.
             </p>
+          </div>
+
             <div class=\"col-lg-2\"></div>
         </div>
 
-          <div class=\"container prodorigines\">
-            <h1 class=\"center\">Production et origines</h1>
-              <div class=\"col-lg-2\"></div>
-                <p class=\"col-lg-8\">
-                  Boisson du sud de la France, la marquisette est connue dans des départements tels que l'Ardèche, la Drôme et le Gard. Originaires de l'Ardèche, les petits enfants Thibon ont connu la marquisette dans les bals d'été, les mariages, les baptêmes... Il existe autant de recettes que de villages. La recette traditionnelle de leur grand père, n'était autre qu'un subtil mélange de vin blanc, de vin pétillant, de limonade, aux senteurs d'agrumes et de rhum.La Marquisette Cesar Thibon est disponible en bouteille de 25 et 75cl.
-                </p>
-              <div class=\"col-lg-2\"></div>
-          </div>
-
-          <div class=\"container recipe\">
-            <h1 class=\"center\">Production et origines</h1>
-              <div class=\"col-lg-2\"></div>
-                <p class=\"col-lg-8\">
-                  Boisson du sud de la France, la marquisette est connue dans des départements tels que l'Ardèche, la Drôme et le Gard. Originaires de l'Ardèche, les petits enfants Thibon ont connu la marquisette dans les bals d'été, les mariages, les baptêmes... Il existe autant de recettes que de villages. La recette traditionnelle de leur grand père, n'était autre qu'un subtil mélange de vin blanc, de vin pétillant, de limonade, aux senteurs d'agrumes et de rhum.La Marquisette Cesar Thibon est disponible en bouteille de 25 et 75cl.
-                </p>
-              <div class=\"col-lg-2\"></div>
-          </div>
-
      <section class=\"container pdv\" id=\"point\">
-        <h1 class=\"center\">Point de vente</h1>
-        <div class=\"col-lg-2\"></div>
-          <p class=\"col-lg-8\">
-            C'est avec un immense plaisir que nous développons au fil des rencontres nos points de distribution. Epiceries fines, restaurants, cafés, bars à cocktails, cavistes, découvrez nos différents points de distribution. Si vous souhaitez distribuer la Marquisette, n'hésitez pas à nous contacter on viendra vous faire déguster ce beau produit ! Cliquez ici pour découvrir nos points de vente...</p>
-          <div class=\"col-lg-2\"></div>
+       <div class=\"col-xs-offset-2 col-xs-8\">
+         <h1 class=\"titles center\">Point de vente</h1>
+           <p class=\"\">
+             C'est avec un immense plaisir que nous développons au fil des rencontres nos points de distribution. Epiceries fines, restaurants, cafés, bars à cocktails, cavistes, découvrez nos différents points de distribution. Si vous souhaitez distribuer la Marquisette, n'hésitez pas à nous contacter on viendra vous faire déguster ce beau produit ! Cliquez ici pour découvrir nos points de vente...
+           </p>
+       </div>
      </section>
 
        <!-- Section COntacts -->
@@ -165,7 +174,7 @@ class __TwigTemplate_deb6de7a10dc8757dfde59740fd151f5e96ee2def3e080718fc5fee1502
       <div class=\"center\">
         <h3 class=\"padContactez\">Contactez nous</h3>
         <div id=\"form_contact\">
-  <form action=\"http://lamarquisette.fr/process.php\" id=\"contact\" method=\"POST\">
+  <form action=\"http://localhost/process.php\" id=\"contact\" method=\"POST\">
     <p>
       <label for=\"nom\" class=\"nom\">Nom:</label>
       <input id=\"nom\" placeholder=\"Votre nom\" name=\"nom\" type=\"text\">
@@ -183,7 +192,7 @@ class __TwigTemplate_deb6de7a10dc8757dfde59740fd151f5e96ee2def3e080718fc5fee1502
     </p>
     <p>
       <label for=\"message\">Message:</label>
-      <textarea id=\"message\" placeholder=\"...\" name=\"message\" rows=\"8\" cols=\"50\"></textarea>
+      <textarea class=\"message-area\" id=\"message\" placeholder=\"...\" name=\"message\" rows=\"8\" cols=\"50\"></textarea>
         <br /><span id=\"msg_message\"></span>
     </p>
     <p>
@@ -210,10 +219,9 @@ class __TwigTemplate_deb6de7a10dc8757dfde59740fd151f5e96ee2def3e080718fc5fee1502
 
 </body>
 </html>
-
 ";
         
-        $__internal_93029504720aa4e9c907bd7428dd38885b30efd05d5767bcfc25c4adf73451e7->leave($__internal_93029504720aa4e9c907bd7428dd38885b30efd05d5767bcfc25c4adf73451e7_prof);
+        $__internal_bb9df43f7862213eec33d7ba660c4e732be198b8cb741b20d4fa472edc637829->leave($__internal_bb9df43f7862213eec33d7ba660c4e732be198b8cb741b20d4fa472edc637829_prof);
 
     }
 
@@ -229,7 +237,7 @@ class __TwigTemplate_deb6de7a10dc8757dfde59740fd151f5e96ee2def3e080718fc5fee1502
 
     public function getDebugInfo()
     {
-        return array (  53 => 22,  49 => 20,  42 => 19,  22 => 1,);
+        return array (  56 => 25,  52 => 23,  45 => 22,  22 => 1,);
     }
 }
 /* <html>*/
@@ -242,6 +250,9 @@ class __TwigTemplate_deb6de7a10dc8757dfde59740fd151f5e96ee2def3e080718fc5fee1502
 /*             <!-- Import de Jquery -->*/
 /*             <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>*/
 /*             <!-- Import de Bootstrap.js -->*/
+/*             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">*/
+/*             <script type='text/javascript' language='javascript' src='../script/disclaimer.js'></script>*/
+/*             <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>*/
 /*             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>*/
 /*             <link rel="stylesheet" href="../main.css">*/
 /*             <!-- Import du fichier JS principal -->*/
@@ -255,32 +266,23 @@ class __TwigTemplate_deb6de7a10dc8757dfde59740fd151f5e96ee2def3e080718fc5fee1502
 /*         {%endif%}*/
 /*         */
 /* */
-/* <!-- DEBUT DE LA PAGE DE DEMANDE +18 ________________________________________-->*/
-/*       <header class="container">*/
-/*             <div class="marg-title">*/
-/*               <!-- image du logo -->*/
-/*                 <img class="img-responsive img-majeur" src="../img/marquisette_logo.png" alt="" />*/
-/*               <!-- image majeur +18 -->*/
-/*                 <img class="img-responsive img-logo" src="../img/majeur_marquisette.png" alt="" />*/
-/*                   <h2 class="center">*/
-/*                     <a class="js-scrollTo" id="yess" href="#navigation">OUI</a>*/
-/*                     <span class="textred">|</span>*/
-/*                     <a href="#">NON</a>*/
-/*                   </h2>*/
-/*             </div>*/
-/*       </header>*/
-/*       <!-- FIN DE LA PAGE DE DEMANDE +18 ____________________________________-->*/
+/* <html>*/
+/* */
+/*     <body>*/
 /* */
 /*      <nav id = "navi">*/
 /*             <ul>*/
 /*                <a class="js-scrollTo" href = ".hist">*/
-/*                  <span class="dot bulle1"></span>*/
+/*                  <span class="dot bulle1">*/
+/*                  </span>*/
 /*                </a>*/
 /*                    <a class="js-scrollTo" href = "#manif">*/
-/*                      <span class="dot bulle1-1"></span>*/
+/*                      <span class="dot bulle1-1">*/
+/*                      </span>*/
 /*                    </a>*/
 /*                    <a class="js-scrollTo" href = "#qui">*/
-/*                      <span class="dot bulle1-2"></span>*/
+/*                      <span class="dot bulle1-2">*/
+/*                      </span>*/
 /*                    </a>*/
 /*               <a class="js-scrollTo" href = ".prod">*/
 /*                 <span class="dot bulle2"></span>*/
@@ -316,50 +318,65 @@ class __TwigTemplate_deb6de7a10dc8757dfde59740fd151f5e96ee2def3e080718fc5fee1502
 /* */
 /*          </div>*/
 /*        </div>*/
-/* */
+/* <!-- manifest -->*/
 /*        <div class="container" id="manif">*/
-/*          <img class="img-responsive manif" src="../img/manif.jpg" alt="" />*/
-/*        </div>*/
 /* */
+/*         <div class="center">*/
+/*           <img class="" src="../img/marquisette_logo.png" alt="logo" />*/
+/*         </div>*/
+/* */
+/*          <div class="marge-img wow bounceInLeft col-xs-offset-4 col-xs-4"><img class="img-responsive" src="../img/manif0.png" alt="" /></div>*/
+/* */
+/*          <div class="marge-img wow bounceInRight col-xs-offset-2 col-xs-8"><img class="img-responsive" src="../img/manif1.png" alt="" /></div>*/
+/* */
+/*          <div class="marge-img wow bounceInLeft col-xs-offset-2 col-xs-8"><img class="img-responsive" src="../img/manif2.png" alt="" /></div>*/
+/* */
+/*          <div class="marge-img wow bounceInRight col-xs-offset-2 col-xs-8"><img class="img-responsive" src="../img/manif3.png" alt="" /></div>*/
+/* */
+/*          <div class="marge-img wow bounceInLeft col-xs-offset-2 col-xs-8"><img class="img-responsive" src="../img/manif4.png" alt="" /></div>*/
+/* */
+/*          <div class="marge-img wow bounceInRight col-xs-offset-2 col-xs-8"><img class="img-responsive" src="../img/manif5.png" alt="" /></div>*/
+/* */
+/*          <div class="marge-img wow bounceInLeft col-xs-offset-2 col-xs-8"><img class="img-responsive" src="../img/manif6.png" alt="" /></div>*/
+/* */
+/*          <div class="marge-img wow bounceInRight col-xs-offset-2 col-xs-8"><img class="img-responsive" src="../img/manif7.png" alt="" /></div>*/
+/* */
+/*          <div class="marge-img wow bounceInLeft col-xs-offset-2 col-xs-8"><img class="img-responsive" src="../img/manif8.png" alt="" /></div>*/
+/* */
+/*          <div class="marge-img wow bounceInRight col-xs-offset-2 col-xs-8"><img class="img-responsive" src="../img/manif9.png" alt="" /></div>*/
+/* */
+/*          <div class="marge-img wow bounceInRight col-xs-offset-4 col-xs-4"><img class="img-responsive" src="../img/manif10.png" alt="" /></div>*/
+/* */
+/* */
+/*        </div>*/
+/* <!-- qui sommes nous -->*/
 /*        <div class="container" id="qui">*/
-/*         <h1 class="center">Qui sommes nous ?</h1>*/
-/*        </div>*/
+/*            <h1 class="titles center">Qui sommes nous ?</h1>*/
+/* */
+/*            <div class="col-xs-offset-2 col-xs-3"><img class="img-responsive" src="../img/qui1.png" alt="" /></div>*/
+/*            <div class="col-xs-5"><img class="img-responsive" src="../img/marquisette_logo.png" alt="" /></div>*/
+/* */
+/*         </div>*/
 /* */
 /* */
-/* */
-/*        <div class="container prod">*/
-/*         <h1 class="center">Produit</h1>*/
-/*           <div class="col-lg-2"></div>*/
-/*             <p class="col-lg-8">*/
+/*        <div class="container prod ">*/
+/*           <div class="col-xs-offset-2 col-xs-8">*/
+/*             <h1 class="titles center">Produit</h1>*/
+/*             <p class="">*/
 /*               Boisson du sud de la France, la marquisette est connue dans des départements tels que l'Ardèche, la Drôme et le Gard. Originaires de l'Ardèche, les petits enfants Thibon ont connu la marquisette dans les bals d'été, les mariages, les baptêmes... Il existe autant de recettes que de villages. La recette traditionnelle de leur grand père, n'était autre qu'un subtil mélange de vin blanc, de vin pétillant, de limonade, aux senteurs d'agrumes et de rhum.La Marquisette Cesar Thibon est disponible en bouteille de 25 et 75cl.*/
 /*             </p>*/
+/*           </div>*/
+/* */
 /*             <div class="col-lg-2"></div>*/
 /*         </div>*/
 /* */
-/*           <div class="container prodorigines">*/
-/*             <h1 class="center">Production et origines</h1>*/
-/*               <div class="col-lg-2"></div>*/
-/*                 <p class="col-lg-8">*/
-/*                   Boisson du sud de la France, la marquisette est connue dans des départements tels que l'Ardèche, la Drôme et le Gard. Originaires de l'Ardèche, les petits enfants Thibon ont connu la marquisette dans les bals d'été, les mariages, les baptêmes... Il existe autant de recettes que de villages. La recette traditionnelle de leur grand père, n'était autre qu'un subtil mélange de vin blanc, de vin pétillant, de limonade, aux senteurs d'agrumes et de rhum.La Marquisette Cesar Thibon est disponible en bouteille de 25 et 75cl.*/
-/*                 </p>*/
-/*               <div class="col-lg-2"></div>*/
-/*           </div>*/
-/* */
-/*           <div class="container recipe">*/
-/*             <h1 class="center">Production et origines</h1>*/
-/*               <div class="col-lg-2"></div>*/
-/*                 <p class="col-lg-8">*/
-/*                   Boisson du sud de la France, la marquisette est connue dans des départements tels que l'Ardèche, la Drôme et le Gard. Originaires de l'Ardèche, les petits enfants Thibon ont connu la marquisette dans les bals d'été, les mariages, les baptêmes... Il existe autant de recettes que de villages. La recette traditionnelle de leur grand père, n'était autre qu'un subtil mélange de vin blanc, de vin pétillant, de limonade, aux senteurs d'agrumes et de rhum.La Marquisette Cesar Thibon est disponible en bouteille de 25 et 75cl.*/
-/*                 </p>*/
-/*               <div class="col-lg-2"></div>*/
-/*           </div>*/
-/* */
 /*      <section class="container pdv" id="point">*/
-/*         <h1 class="center">Point de vente</h1>*/
-/*         <div class="col-lg-2"></div>*/
-/*           <p class="col-lg-8">*/
-/*             C'est avec un immense plaisir que nous développons au fil des rencontres nos points de distribution. Epiceries fines, restaurants, cafés, bars à cocktails, cavistes, découvrez nos différents points de distribution. Si vous souhaitez distribuer la Marquisette, n'hésitez pas à nous contacter on viendra vous faire déguster ce beau produit ! Cliquez ici pour découvrir nos points de vente...</p>*/
-/*           <div class="col-lg-2"></div>*/
+/*        <div class="col-xs-offset-2 col-xs-8">*/
+/*          <h1 class="titles center">Point de vente</h1>*/
+/*            <p class="">*/
+/*              C'est avec un immense plaisir que nous développons au fil des rencontres nos points de distribution. Epiceries fines, restaurants, cafés, bars à cocktails, cavistes, découvrez nos différents points de distribution. Si vous souhaitez distribuer la Marquisette, n'hésitez pas à nous contacter on viendra vous faire déguster ce beau produit ! Cliquez ici pour découvrir nos points de vente...*/
+/*            </p>*/
+/*        </div>*/
 /*      </section>*/
 /* */
 /*        <!-- Section COntacts -->*/
@@ -368,7 +385,7 @@ class __TwigTemplate_deb6de7a10dc8757dfde59740fd151f5e96ee2def3e080718fc5fee1502
 /*       <div class="center">*/
 /*         <h3 class="padContactez">Contactez nous</h3>*/
 /*         <div id="form_contact">*/
-/*   <form action="http://lamarquisette.fr/process.php" id="contact" method="POST">*/
+/*   <form action="http://localhost/process.php" id="contact" method="POST">*/
 /*     <p>*/
 /*       <label for="nom" class="nom">Nom:</label>*/
 /*       <input id="nom" placeholder="Votre nom" name="nom" type="text">*/
@@ -386,7 +403,7 @@ class __TwigTemplate_deb6de7a10dc8757dfde59740fd151f5e96ee2def3e080718fc5fee1502
 /*     </p>*/
 /*     <p>*/
 /*       <label for="message">Message:</label>*/
-/*       <textarea id="message" placeholder="..." name="message" rows="8" cols="50"></textarea>*/
+/*       <textarea class="message-area" id="message" placeholder="..." name="message" rows="8" cols="50"></textarea>*/
 /*         <br /><span id="msg_message"></span>*/
 /*     </p>*/
 /*     <p>*/
@@ -413,5 +430,4 @@ class __TwigTemplate_deb6de7a10dc8757dfde59740fd151f5e96ee2def3e080718fc5fee1502
 /* */
 /* </body>*/
 /* </html>*/
-/* */
 /* */

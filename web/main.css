@@ -1,3 +1,9 @@
+@font-face {
+  font-family: "titles";
+  src: url("polices/titles.ttf"); }
+@font-face {
+  font-family: "text";
+  src: url("polices/myriad.ttf"); }
 html,
 body {
   height: 100%;
@@ -6,22 +12,31 @@ body {
   html h1,
   body h1 {
     font-size: 65px;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    font-family: "titles";
+    color: #ae0f09; }
   html li,
   body li {
     list-style-type: none; }
+  html p,
+  body p {
+    font-family: "text";
+    color: #312f48; }
 
 .container {
   min-height: 100%;
   width: 100%; }
 
 .titles {
-  color: #f9f9f9;
+  color: #ae0f09;
+  font-size: 50px;
   text-align: center;
-  padding-top: 19%; }
+  margin-bottom: 5%; }
 
 .center {
-  text-align: center; }
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto; }
 
 section p {
   border-top: 2px solid #312f48;
@@ -33,6 +48,9 @@ section p {
   text-align: center;
   color: #f9f9f9;
   padding-top: 1%; }
+
+.message-area {
+  resize: none; }
 
 header {
   border-top: 15px solid #ae0f09; }
@@ -111,24 +129,27 @@ header {
   height: 25px;
   top: 64.5%; }
 
+.menu-marg {
+  margin-left: 30px; }
+
 .img1 {
   width: 100%;
   height: 100%;
-  background-image: url(img/majeur_marquisette.png);
+  background-image: url(img/car1.jpg);
   background-size: cover;
   background-repeat: no-repeat; }
 
 .img2 {
   width: 100%;
   height: 100%;
-  background-image: url(img/marquisette_logo.png);
+  background-image: url(img/car2.jpeg);
   background-size: cover;
   background-repeat: no-repeat; }
 
 .img3 {
   width: 100%;
   height: 100%;
-  background-image: url(img/slider-cave2.jpg);
+  background-image: url(img/car3.jpg);
   background-size: cover;
   background-repeat: no-repeat; }
 
@@ -138,9 +159,15 @@ header {
 .carousel-indicators {
   color: #ae0f09; }
 
-.manif {
-  width: 100%;
-  min-height: 100%; }
+.test1 {
+  background-image: url(img/manif.png);
+  background-size: cover; }
+
+body {
+  overflow-x: hidden; }
+
+.marge-img {
+  padding: 3%; }
 
 .padContactez {
   margin-bottom: 4%; }
