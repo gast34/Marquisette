@@ -1,4 +1,13 @@
-{%if app.user.username == "gast34"%}Génération<br>ajouterDevis
+{%if app.user.username == "gast34"%}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src ="../script/generation.js"></script>
+
+    Génération : <br>
+
+    {{form(form)}}<input id ="gene" type ="button" value ="Générer"/>
+
+
+    <br>ajouterDevis
 
 {%else%}Recup devis
 {%endif%}

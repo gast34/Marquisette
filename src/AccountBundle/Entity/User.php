@@ -39,7 +39,7 @@ class User implements UserInterface {
     /**
      * @var string
      *
-     * @ORM\Column(name="salt", type="string", length=255)
+     * @ORM\Column(name="salt", type="string", length=255 )
      */
     private $salt;
 
@@ -49,6 +49,15 @@ class User implements UserInterface {
      * @ORM\Column(name="roles", type="array")
      */
     private $roles = array();
+    
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="mail", type="string")
+     */
+    private $mail ;
+    
+    
 
     /**
      * Get id
@@ -146,6 +155,37 @@ class User implements UserInterface {
     public function getRoles() {
         return $this->roles;
     }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    /**
+     * Set mail
+     *
+     * @param string $mail
+     *
+     * @return User
+     */
+    public function setMail($mail) {
+        $this->mail = $mail;
+
+        return $this;
+    }
+
+    /**
+     * Get mail
+     *
+     * @return string
+     */
+    public function getMail() {
+        return $this->mail;
+    }
+
 
     public function eraseCredentials() {
         
