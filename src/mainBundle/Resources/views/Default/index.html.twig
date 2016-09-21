@@ -26,10 +26,30 @@
     </head>
     <body>
 
-
+        <div id = "test">cc</div>
         {%if app.user.username is defined %}Bonjour {{app.user.username}} <a href ="logout">Deconnexion</a><a href ="gestion">Gestion</a>  
         {%else%}<a href ="connexion">Connexion</a>
         {%endif%}
+        
+        {%set i = 0%}
+        {%for result in test%}
+            {%set i = i + 1%}
+            
+            <div class = "description{{i}}" >
+                {{result.description}}
+            </div>
+            <div class = "adresse{{i}}">
+                {{result.adresse}}
+            </div>
+            <div class = "longitude{{i}}">
+               {{result.longitude}}
+            </div>
+            <div class = "latitude{{i}}">
+                {{result.latitude}}  
+            </div>
+            
+
+        {%endfor%}
 
 
     <html>
