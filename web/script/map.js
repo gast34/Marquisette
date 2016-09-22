@@ -1,16 +1,21 @@
 var map;
 function initMap() {
-    
-    
-    var home = {lat: parseFloat($('.latitude1').text()) , lng: parseFloat($('.longitude1').text())};
-    var lycee = {lat: parseFloat($('.latitude2').text()), lng: parseFloat($('.longitude2').text())};
+    var nb_mark = parseInt($('#val').text());
 
-    var tab = new Array();
-    tab.push(home);
-    tab.push(lycee);
+
+    var tab_coo = new Array();
+    var tab_titre = new Array();
+
+    for (var i = 1; i < nb_mark + 1; i++)
+    {
+        tab_titre.push($('.description' + i).text())
+        tab_coo.push({lat: parseFloat($('.latitude' + i).text()), lng: parseFloat($('.longitude' + i).text())});
+    }
 
     var marqueur = {
-        coo: tab
+        coo: tab_coo,
+        titre: tab_titre
+
     };
 
 
@@ -19,21 +24,31 @@ function initMap() {
         zoom: 12
     });
 
-    var marker = new google.maps.Marker({
-        position: marqueur.coo[0],
-        map: map,
-        title: 'Sweet Home'
-    });
-    var marker2 = new google.maps.Marker({
-        position: marqueur.coo[1],
-        map: map,
-        title: 'Lycée de MERDE!'
-    });
+    for (var x = 1; x < nb_mark + 1; x++)
+    {
+        var marker  = new google.maps.Marker({
+            position: marqueur.coo[x - 1],
+            map: map,
+            title: marqueur.titre[x - 1]
+        });
 
+    }
+    /*
+     var marker = new google.maps.Marker({
+     position: marqueur.coo[0],
+     map: map,
+     title: marqueur.titre[0]
+     });
+     var marker2 = new google.maps.Marker({
+     position: marqueur.coo[1],
+     map: map,
+     title: marqueur.titre[1]
+     });
+     */
 }
 $('document').ready(function () {
 
-    
+
 
 });
 

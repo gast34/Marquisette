@@ -3,13 +3,13 @@
 namespace AccountBundle\Controller;
 
 use AccountBundle\Entity\User;
+use AccountBundle\Entity\PointsVente;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\Response;
 
 class LogController extends Controller {
 
@@ -44,23 +44,38 @@ class LogController extends Controller {
 
         $em = $this->getDoctrine()->getManager();
         $user = new User();
+        $point = new PointsVente();
 
         $form = $this->createFormBuilder($user)
                 ->add('Username', TextType::class)
                 ->add('Password')
-                ->add('mail' , EmailType::class)
+                ->add('mail', EmailType::class)
                 ->add('Envoyer', SubmitType::class)
                 ->getForm();
         $form->handleRequest($request);
 
         if ($form->isValid()) {
-            
+
             $user->setSalt("gg");
+
             $em->persist($user);
             $em->flush();
 
             return $this->redirect("gestion");
         }
+
+        if ($request->getMethod() == 'POST') {
+            $point->setAdresse($request->get('adresse'));
+
+            $point->setDescription("ouiiii");
+            $point->setLatitude($request->get('latitude'));
+            $point->setLongitude($request->get('longitude'));
+
+            $em->persist($point);
+            $em->flush();
+        }
+
+
         return $this->render('AccountBundle:Default:gestion.html.twig', array('form' => $form->createView()));
     }
 

@@ -1,14 +1,30 @@
+<body>
 {%if app.user.username == "gast34"%}
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src ="../script/generation.js"></script>
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA2tZpX31pxKdUuGC9w4u-zPnqbwSWSMSg&callback=initMap">
+    </script>
+    <script src ="../script/map_gestion.js"></script>
+    <style type="text/css">
+        html, body { height: 100%; margin: 0; padding: 0; }
+        #map { height: 70%; width:50%}
+    </style>
 
     Génération : <br>
 
     {{form(form)}}<input id ="gene" type ="button" value ="Générer"/>
 
+    <br>Mettre Points de ventes :
+    <input type="text" id="description" placeholder="Déscription du point de vente"/>
+    <input type="text" id="adresse" placeholder="Adresse du point de vente"/>
+    <input type="button"  value="Localiser sur Google Map" onclick="TrouverAdresse();"/>
+    <span id="text_latlng"></span>
+    <div id ="map"></div>
 
     <br>ajouterDevis
 
 {%else%}Recup devis
 {%endif%}
+</body>
 

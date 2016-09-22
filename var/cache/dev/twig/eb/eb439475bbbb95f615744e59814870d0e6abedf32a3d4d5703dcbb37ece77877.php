@@ -15,8 +15,8 @@ class __TwigTemplate_deb6de7a10dc8757dfde59740fd151f5e96ee2def3e080718fc5fee1502
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_72d6cc53ff88f6e2cf23016b6bbdfb4c37bacb6405b54e707a7cbdb7a8ab1c85 = $this->env->getExtension("native_profiler");
-        $__internal_72d6cc53ff88f6e2cf23016b6bbdfb4c37bacb6405b54e707a7cbdb7a8ab1c85->enter($__internal_72d6cc53ff88f6e2cf23016b6bbdfb4c37bacb6405b54e707a7cbdb7a8ab1c85_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "mainBundle:Default:index.html.twig"));
+        $__internal_0d212b461afad5f3de44b3ac2e4386e9d46a748e96cde44abaada9b554226b06 = $this->env->getExtension("native_profiler");
+        $__internal_0d212b461afad5f3de44b3ac2e4386e9d46a748e96cde44abaada9b554226b06->enter($__internal_0d212b461afad5f3de44b3ac2e4386e9d46a748e96cde44abaada9b554226b06_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "mainBundle:Default:index.html.twig"));
 
         // line 1
         echo "<html>
@@ -47,83 +47,84 @@ class __TwigTemplate_deb6de7a10dc8757dfde59740fd151f5e96ee2def3e080718fc5fee1502
     </head>
     <body>
 
-        <div id = \"test\">cc</div>
         ";
-        // line 30
+        // line 29
         if ($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : null), "user", array(), "any", false, true), "username", array(), "any", true, true)) {
             echo "Bonjour ";
             echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "user", array()), "username", array()), "html", null, true);
             echo " <a href =\"logout\">Deconnexion</a><a href =\"gestion\">Gestion</a>  
         ";
         } else {
-            // line 31
+            // line 30
             echo "<a href =\"connexion\">Connexion</a>
         ";
         }
-        // line 33
-        echo "        
+        // line 32
+        echo "
         ";
-        // line 34
+        // line 33
         $context["i"] = 0;
+        // line 34
+        echo "        <div style=\"display:none\">
+            ";
         // line 35
-        echo "        ";
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["test"]) ? $context["test"] : $this->getContext($context, "test")));
         foreach ($context['_seq'] as $context["_key"] => $context["result"]) {
             // line 36
-            echo "            ";
+            echo "                ";
             $context["i"] = ((isset($context["i"]) ? $context["i"] : $this->getContext($context, "i")) + 1);
-            // line 37
-            echo "            
-            <div class = \"description";
+            echo "    
+
+                <div class = \"description";
             // line 38
             echo twig_escape_filter($this->env, (isset($context["i"]) ? $context["i"] : $this->getContext($context, "i")), "html", null, true);
             echo "\" >
-                ";
+                    ";
             // line 39
             echo twig_escape_filter($this->env, $this->getAttribute($context["result"], "description", array()), "html", null, true);
             echo "
-            </div>
-            <div class = \"adresse";
+                </div>
+                <div class = \"adresse";
             // line 41
             echo twig_escape_filter($this->env, (isset($context["i"]) ? $context["i"] : $this->getContext($context, "i")), "html", null, true);
             echo "\">
-                ";
+                    ";
             // line 42
             echo twig_escape_filter($this->env, $this->getAttribute($context["result"], "adresse", array()), "html", null, true);
             echo "
-            </div>
-            <div class = \"longitude";
+                </div>
+                <div class = \"longitude";
             // line 44
             echo twig_escape_filter($this->env, (isset($context["i"]) ? $context["i"] : $this->getContext($context, "i")), "html", null, true);
             echo "\">
-               ";
+                    ";
             // line 45
             echo twig_escape_filter($this->env, $this->getAttribute($context["result"], "longitude", array()), "html", null, true);
             echo "
-            </div>
-            <div class = \"latitude";
+                </div>
+                <div class = \"latitude";
             // line 47
             echo twig_escape_filter($this->env, (isset($context["i"]) ? $context["i"] : $this->getContext($context, "i")), "html", null, true);
             echo "\">
-                ";
+                    ";
             // line 48
             echo twig_escape_filter($this->env, $this->getAttribute($context["result"], "latitude", array()), "html", null, true);
             echo "  
-            </div>
-            
+                </div>
 
-        ";
+            ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['result'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 53
-        echo "
+        // line 52
+        echo "        </div>
 
-    <html>
-
-        <body>
+        <div id = \"val\" style=\"display:none\">";
+        // line 54
+        echo twig_escape_filter($this->env, (isset($context["i"]) ? $context["i"] : $this->getContext($context, "i")), "html", null, true);
+        echo "</div>
 
             <nav id = \"navi\">
                 <ul>
@@ -289,7 +290,7 @@ class __TwigTemplate_deb6de7a10dc8757dfde59740fd151f5e96ee2def3e080718fc5fee1502
     </html>
 ";
         
-        $__internal_72d6cc53ff88f6e2cf23016b6bbdfb4c37bacb6405b54e707a7cbdb7a8ab1c85->leave($__internal_72d6cc53ff88f6e2cf23016b6bbdfb4c37bacb6405b54e707a7cbdb7a8ab1c85_prof);
+        $__internal_0d212b461afad5f3de44b3ac2e4386e9d46a748e96cde44abaada9b554226b06->leave($__internal_0d212b461afad5f3de44b3ac2e4386e9d46a748e96cde44abaada9b554226b06_prof);
 
     }
 
@@ -305,7 +306,7 @@ class __TwigTemplate_deb6de7a10dc8757dfde59740fd151f5e96ee2def3e080718fc5fee1502
 
     public function getDebugInfo()
     {
-        return array (  122 => 53,  111 => 48,  107 => 47,  102 => 45,  98 => 44,  93 => 42,  89 => 41,  84 => 39,  80 => 38,  77 => 37,  74 => 36,  69 => 35,  67 => 34,  64 => 33,  60 => 31,  53 => 30,  22 => 1,);
+        return array (  126 => 54,  122 => 52,  112 => 48,  108 => 47,  103 => 45,  99 => 44,  94 => 42,  90 => 41,  85 => 39,  81 => 38,  75 => 36,  71 => 35,  68 => 34,  66 => 33,  63 => 32,  59 => 30,  52 => 29,  22 => 1,);
     }
 }
 /* <html>*/
@@ -336,35 +337,32 @@ class __TwigTemplate_deb6de7a10dc8757dfde59740fd151f5e96ee2def3e080718fc5fee1502
 /*     </head>*/
 /*     <body>*/
 /* */
-/*         <div id = "test">cc</div>*/
 /*         {%if app.user.username is defined %}Bonjour {{app.user.username}} <a href ="logout">Deconnexion</a><a href ="gestion">Gestion</a>  */
 /*         {%else%}<a href ="connexion">Connexion</a>*/
 /*         {%endif%}*/
-/*         */
+/* */
 /*         {%set i = 0%}*/
-/*         {%for result in test%}*/
-/*             {%set i = i + 1%}*/
-/*             */
-/*             <div class = "description{{i}}" >*/
-/*                 {{result.description}}*/
-/*             </div>*/
-/*             <div class = "adresse{{i}}">*/
-/*                 {{result.adresse}}*/
-/*             </div>*/
-/*             <div class = "longitude{{i}}">*/
-/*                {{result.longitude}}*/
-/*             </div>*/
-/*             <div class = "latitude{{i}}">*/
-/*                 {{result.latitude}}  */
-/*             </div>*/
-/*             */
+/*         <div style="display:none">*/
+/*             {%for result in test%}*/
+/*                 {%set i = i + 1%}    */
 /* */
-/*         {%endfor%}*/
+/*                 <div class = "description{{i}}" >*/
+/*                     {{result.description}}*/
+/*                 </div>*/
+/*                 <div class = "adresse{{i}}">*/
+/*                     {{result.adresse}}*/
+/*                 </div>*/
+/*                 <div class = "longitude{{i}}">*/
+/*                     {{result.longitude}}*/
+/*                 </div>*/
+/*                 <div class = "latitude{{i}}">*/
+/*                     {{result.latitude}}  */
+/*                 </div>*/
 /* */
+/*             {%endfor%}*/
+/*         </div>*/
 /* */
-/*     <html>*/
-/* */
-/*         <body>*/
+/*         <div id = "val" style="display:none">{{i}}</div>*/
 /* */
 /*             <nav id = "navi">*/
 /*                 <ul>*/
