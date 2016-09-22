@@ -830,3 +830,5 @@ d30601,127.0.0.1,GET,http://localhost/Marquisette/web/app_dev.php/gestion.css,14
 614471,127.0.0.1,GET,http://localhost/Marquisette/web/app_dev.php/gestion.css,1474545847,,404
 2bae2f,127.0.0.1,GET,http://localhost/Marquisette/web/app_dev.php/gestion,1474545879,,200
 d5216d,127.0.0.1,GET,http://localhost/Marquisette/web/app_dev.php/gestion,1474545904,,200
+648f33,127.0.0.1,GET,http://localhost/Marquisette/web/app_dev.php/Marquis,1474546222,14d5a9,200
+14d5a9,127.0.0.1,GET,http://localhost/Marquisette/web/app_dev.php/Marquis,1474546222,,500

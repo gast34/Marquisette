@@ -31,7 +31,9 @@ body {
   color: #ae0f09;
   font-size: 50px;
   text-align: center;
-  margin-bottom: 5%; }
+  margin-top: 8%;
+  border-bottom: 2px solid #312f48;
+  padding-bottom: 4%; }
 
 .center {
   text-align: center;
@@ -39,7 +41,6 @@ body {
   margin-right: auto; }
 
 section p {
-  border-top: 2px solid #312f48;
   padding-top: 3%; }
 
 .endSite {
@@ -169,9 +170,6 @@ body {
 .marge-img {
   padding: 3%; }
 
-.padContactez {
-  margin-bottom: 4%; }
-
 label {
   margin-right: 20px; }
 
@@ -195,30 +193,83 @@ label {
   border-top: 0;
   border-left: 0;
   border-right: 0;
-  background-color: #fff0ce; }
+  background-color: #fff0ce;
+  font-family: "text";
+  font-size: 18px; }
 
 #sujet {
   border-bottom: 2px solid #2D3265;
   border-top: 0;
   border-left: 0;
   border-right: 0;
-  background-color: #fff0ce; }
+  background-color: #fff0ce;
+  font-family: "text";
+  font-size: 18px; }
 
 #email {
   border-bottom: 2px solid #2D3265;
   border-top: 0;
   border-left: 0;
   border-right: 0;
-  background-color: #fff0ce; }
+  background-color: #fff0ce;
+  font-family: "text";
+  font-size: 18px; }
+
+#nom:focus {
+  border-bottom: 2px solid #ae0f09;
+  transition: border-bottom 0.5s; }
+
+#sujet:focus {
+  border-bottom: 2px solid #ae0f09;
+  transition: border-bottom 0.5s; }
+
+#email:focus {
+  border-bottom: 2px solid #ae0f09;
+  transition: border-bottom 0.5s; }
 
 #message {
   border: 2px solid #2D3265;
-  border-radius: 3px;
   color: #111;
-  background-color: #fff0ce; }
+  background-color: #fff0ce;
+  font-family: "text";
+  font-size: 18px;
+  margin-top: 3%; }
+
+#message:focus {
+  border-radius: 5px;
+  -moz-box-shadow: 10px 10px 5px 0px #656565;
+  -webkit-box-shadow: 10px 10px 5px 0px #656565;
+  -o-box-shadow: 10px 10px 5px 0px #656565;
+  box-shadow: 10px 10px 5px 0px #656565;
+  filter: progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=134, Strength=5);
+  border: 2px solid #ae0f09;
+  transition: box-shadow 1s , border-radius 1s , border 0.5s; }
 
 #msg_all {
   margin-top: 150px; }
+
+.boutonSend {
+  width: 125px;
+  height: 40px;
+  border: 2px solid #2D3265;
+  border-radius: 2px;
+  margin-top: 2%;
+  font-family: "titles";
+  font-size: 15px; }
+
+.boutonSend:hover {
+  cursor: pointer;
+  background-color: #2D3265; }
+
+#send {
+  color: #2D3265; }
+
+#send:hover {
+  color: #f9f9f9; }
+
+.msgConfirm {
+  font-family: "titles";
+  font-size: 800px; }
 
 .fin-du-site {
   margin-bottom: 5%; }
