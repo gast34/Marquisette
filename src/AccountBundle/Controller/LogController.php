@@ -43,6 +43,8 @@ class LogController extends Controller {
     public function gestionAction(Request $request) {
 
         $em = $this->getDoctrine()->getManager();
+        $comptes = $this->getDoctrine()->getManager()->getRepository("AccountBundle:User");
+        $results_use = $comptes->findAll();
         $marqueur = $this->getDoctrine()->getManager()->getRepository("AccountBundle:PointsVente");
         $results = $marqueur->findAll();
 
@@ -76,18 +78,16 @@ class LogController extends Controller {
 
             $em->persist($point);
             $em->flush();
-             return $this->redirectToRoute("gestion");
+            return $this->redirect("gestion");
         }
 
 
-        return $this->render('AccountBundle:Default:gestion.html.twig', array('form' => $form->createView(), 'points' => $results));
+        return $this->render('AccountBundle:Default:gestion.html.twig', array('form' => $form->createView(), 'points' => $results , 'users' => $results_use));
     }
-
     /**
-     * @Route("/supprimer/{nom}")
+     * @Route("/supprimer/points/{nom}")
      */
-    function deleteAction($nom) {
-
+    function deletePointAction($nom) {
 
         $em = $this->getDoctrine()->getManager();
 
@@ -99,6 +99,26 @@ class LogController extends Controller {
         $point = $repository->findOneBy(array('description' => $nom));
 
         $em->remove($point);
+        $em->flush();
+
+        return $this->redirectToRoute("gestion");
+
+    }
+    /**
+     * @Route("/supprimer/users/{nom}")
+     */
+    function deleteUserstAction($nom) {
+
+        $em = $this->getDoctrine()->getManager();
+
+        $repository = $this
+                ->getDoctrine()
+                ->getManager()
+                ->getRepository('AccountBundle:User');
+
+        $user = $repository->findOneBy(array('username' => $nom));
+
+        $em->remove($user);
         $em->flush();
 
         return $this->redirectToRoute("gestion");

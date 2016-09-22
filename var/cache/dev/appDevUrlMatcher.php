@@ -115,6 +115,19 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return array (  '_controller' => 'AccountBundle\\Controller\\LogController::gestionAction',  '_route' => 'gestion',);
         }
 
+        if (0 === strpos($pathinfo, '/supprimer')) {
+            // account_log_deletepoint
+            if (0 === strpos($pathinfo, '/supprimer/points') && preg_match('#^/supprimer/points/(?P<nom>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'account_log_deletepoint')), array (  '_controller' => 'AccountBundle\\Controller\\LogController::deletePointAction',));
+            }
+
+            // account_log_deleteuserst
+            if (0 === strpos($pathinfo, '/supprimer/users') && preg_match('#^/supprimer/users/(?P<nom>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'account_log_deleteuserst')), array (  '_controller' => 'AccountBundle\\Controller\\LogController::deleteUserstAction',));
+            }
+
+        }
+
         // login
         if ($pathinfo === '/connexion') {
             return array (  '_controller' => 'AccountBundle:LogController',  '_route' => 'login',);

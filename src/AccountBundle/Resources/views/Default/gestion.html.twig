@@ -17,11 +17,27 @@
 
         {{form(form)}}<input id ="gene" type ="button" value ="Générer"/>
 
+        {%set i = 0%}
+        {%for resultats in users%}
+            {%set i = i + 1%} 
+
+            {%if i != 1%}
+
+                <div class = "point_contain">
+                    <a href = "supprimer/users/{{resultats.username}}"><input class="suppr" type="button" value="Supprimer"/></a>
+                    Nom : {{resultats.username}}<br>
+                    Mot de Passe : {{resultats.password}}<br>
+                    Email: {{resultats.mail}}<br>
+
+                </div>
+            {%endif%}
+
+        {%endfor%}
+
         <br>Mettre Points de ventes :
         <input type="text" id="description" placeholder="Déscription du point de vente"/>
         <input type="text" id="adresse" placeholder="Adresse du point de vente"/>
         <input type="button"  value="Localiser sur Google Map" onclick="TrouverAdresse();"/>
-        <span id="text_latlng"></span>
         <div id ="map"></div>
 
         {%set i = 0%}
@@ -30,7 +46,7 @@
             {%set i = i + 1%}    
 
             <div class = "point_contain">
-                <a href = "supprimer/{{result.description}}"><input class="suppr" type="button" value="Supprimer"/></a>
+                <a href = "supprimer/points/{{result.description}}"><input class="suppr" type="button" value="Supprimer"/></a>
 
                 <div class = "description{{i}}" >
                     {{result.description}}

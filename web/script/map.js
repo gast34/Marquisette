@@ -33,18 +33,7 @@ function initMap() {
         });
 
     }
-    /*
-     var marker = new google.maps.Marker({
-     position: marqueur.coo[0],
-     map: map,
-     title: marqueur.titre[0]
-     });
-     var marker2 = new google.maps.Marker({
-     position: marqueur.coo[1],
-     map: map,
-     title: marqueur.titre[1]
-     });
-     */
+   
 }
 $('document').ready(function () {
 
