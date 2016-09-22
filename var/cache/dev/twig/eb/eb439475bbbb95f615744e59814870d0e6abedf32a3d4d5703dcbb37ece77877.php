@@ -15,8 +15,8 @@ class __TwigTemplate_deb6de7a10dc8757dfde59740fd151f5e96ee2def3e080718fc5fee1502
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_0d212b461afad5f3de44b3ac2e4386e9d46a748e96cde44abaada9b554226b06 = $this->env->getExtension("native_profiler");
-        $__internal_0d212b461afad5f3de44b3ac2e4386e9d46a748e96cde44abaada9b554226b06->enter($__internal_0d212b461afad5f3de44b3ac2e4386e9d46a748e96cde44abaada9b554226b06_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "mainBundle:Default:index.html.twig"));
+        $__internal_ba7c1dcafc345af359b8685adca32a0ba74c7163aab20daa943f4283c4242081 = $this->env->getExtension("native_profiler");
+        $__internal_ba7c1dcafc345af359b8685adca32a0ba74c7163aab20daa943f4283c4242081->enter($__internal_ba7c1dcafc345af359b8685adca32a0ba74c7163aab20daa943f4283c4242081_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "mainBundle:Default:index.html.twig"));
 
         // line 1
         echo "<html>
@@ -126,105 +126,85 @@ class __TwigTemplate_deb6de7a10dc8757dfde59740fd151f5e96ee2def3e080718fc5fee1502
         echo twig_escape_filter($this->env, (isset($context["i"]) ? $context["i"] : $this->getContext($context, "i")), "html", null, true);
         echo "</div>
 
-            <nav id = \"navi\">
-                <ul>
-                    <a class=\"js-scrollTo\" href = \".hist\">
-                        <span class=\"dot bulle1\">
-                        </span>
-                    </a>
-                    <a class=\"js-scrollTo\" href = \"#manif\">
-                        <span class=\"dot bulle1-1\">
-                        </span>
-                    </a>
-                    <a class=\"js-scrollTo\" href = \"#qui\">
-                        <span class=\"dot bulle1-2\">
-                        </span>
-                    </a>
-                    <a class=\"js-scrollTo\" href = \".prod\">
-                        <span class=\"dot bulle2\"></span>
-                    </a>
-                    <a class=\"js-scrollTo\" href = \".prodorigines\">
-                        <span class=\"dot bulle2-1\"></span>
-                    </a>
-                    <a class=\"js-scrollTo\" href = \".recipe\">
-                        <span class=\"dot bulle2-2\"></span>
-                    </a>
-                    <a class=\"js-scrollTo\" href = \"#point\">
-                        <span class=\"dot bulle3\"></span>
-                    </a>
-                </ul>
-            </nav>
+<!-- Menu de navigation (petites bulles sur la gauche de la vue) -->
+     <nav id = \"navi\">
+          <ul>
+              <a class=\"js-scrollTo\" href = \".hist\"><!--fonction smooth scroll-->
+                 <span class=\"dot bulle1\"></span>
+              </a>
+              <a class=\"js-scrollTo\" href = \"#manif\"><!--fonction smooth scroll-->
+                 <span class=\"dot bulle1-1\"></span>
+              </a>
+              <a class=\"js-scrollTo\" href = \"#qui\"><!--fonction smooth scroll-->
+               <span class=\"dot bulle1-2\"></span>
+              </a>
+              <a class=\"js-scrollTo\" href = \".prod\"><!--fonction smooth scroll-->
+                <span class=\"dot bulle2\"></span>
+              </a>
+              <a class=\"js-scrollTo\" href = \"#point\"><!--fonction smooth scroll-->
+               <span class=\"dot bulle3\"></span>
+             </a>
+          </ul>
+     </nav>
+     <!-- Carousel du haut___________________________________________________-->
+       <div id=\"myCarousel\" class=\"carousel slide hist\">
+         <!-- bulles control du carousel -->
+         <ol class=\"carousel-indicators\">
+           <li data-target=\"#myCarousel\" data-slide-to=\"0\" class=\"active\"></li>
+           <li data-target=\"#myCarousel\" data-slide-to=\"1\"></li>
+           <li data-target=\"#myCarousel\" data-slide-to=\"2\"></li>
+         </ol>
 
-            <div id=\"myCarousel\" class=\"carousel slide hist\">
-                <!-- Indicators -->
-                <ol class=\"carousel-indicators\">
-                    <li data-target=\"#myCarousel\" data-slide-to=\"0\" class=\"active\"></li>
-                    <li data-target=\"#myCarousel\" data-slide-to=\"1\"></li>
-                    <li data-target=\"#myCarousel\" data-slide-to=\"2\"></li>
-                </ol>
+         <!-- Images/items du carousel -->
+         <div class=\"carousel-inner\">
 
-                <!-- Wrapper for slides -->
-                <div class=\"carousel-inner\">
+           <div class=\"item active img1\"></div>
 
-                    <div class=\"item active img1\"></div>
+           <div class=\"item img2\"></div>
 
-                    <div class=\"item img2\"></div>
+           <div class=\"item img3\"></div>
 
-                    <div class=\"item img3\"></div>
+         </div>
+       </div>
+<!-- manifeste _____________________________________________________________-->
+      <section class=\"container\" id=\"manif\">
 
-                </div>
-            </div>
-            <!-- manifest -->
-            <div class=\"container\" id=\"manif\">
+        <div class=\"center\">
+          <img class=\"\" src=\"../img/marquisette_logo.png\" alt=\"logo\" />
+        </div>
+           <div class=\"marge-img wow bounceInLeft col-xs-offset-4 col-xs-4\"><img class=\"img-responsive\" src=\"../img/manif0.png\" alt=\"\" /></div>
+           <div class=\"marge-img wow bounceInRight col-xs-offset-2 col-xs-8\"><img class=\"img-responsive\" src=\"../img/manif1.png\" alt=\"\" /></div>
+           <div class=\"marge-img wow bounceInLeft col-xs-offset-2 col-xs-8\"><img class=\"img-responsive\" src=\"../img/manif2.png\" alt=\"\" /></div>
+           <div class=\"marge-img wow bounceInRight col-xs-offset-2 col-xs-8\"><img class=\"img-responsive\" src=\"../img/manif3.png\" alt=\"\" /></div>
+           <div class=\"marge-img wow bounceInLeft col-xs-offset-2 col-xs-8\"><img class=\"img-responsive\" src=\"../img/manif4.png\" alt=\"\" /></div>
+           <div class=\"marge-img wow bounceInRight col-xs-offset-2 col-xs-8\"><img class=\"img-responsive\" src=\"../img/manif5.png\" alt=\"\" /></div>
+           <div class=\"marge-img wow bounceInLeft col-xs-offset-2 col-xs-8\"><img class=\"img-responsive\" src=\"../img/manif6.png\" alt=\"\" /></div>
+           <div class=\"marge-img wow bounceInRight col-xs-offset-2 col-xs-8\"><img class=\"img-responsive\" src=\"../img/manif7.png\" alt=\"\" /></div>
+           <div class=\"marge-img wow bounceInLeft col-xs-offset-2 col-xs-8\"><img class=\"img-responsive\" src=\"../img/manif8.png\" alt=\"\" /></div>
+           <div class=\"marge-img wow bounceInRight col-xs-offset-2 col-xs-8\"><img class=\"img-responsive\" src=\"../img/manif9.png\" alt=\"\" /></div>
+           <div class=\"marge-img wow bounceInRight col-xs-offset-4 col-xs-4\"><img class=\"img-responsive\" src=\"../img/manif10.png\" alt=\"\" /></div>
+       </section>
+<!--section qui sommes nous_________________________________________________ -->
+       <section class=\"container\" id=\"qui\">
+         <div class=\"col-xs-offset-2 col-xs-8\">
+           <h1 class=\"titles center\">Qui sommes nous ?</h1>
 
-                <div class=\"center\">
-                    <img class=\"\" src=\"../img/marquisette_logo.png\" alt=\"logo\" />
-                </div>
+           <div class=\"col-xs-offset-2 col-xs-3\"><img class=\"img-responsive\" src=\"../img/qui1.png\" alt=\"\" /></div>
+           <div class=\"col-xs-5\"><img class=\"img-responsive\" src=\"../img/marquisette_logo.png\" alt=\"\" /></div>
+         </div>
+        </section>
+<!-- Fin de la section qui sommes nous ______________________________________-->
 
-                <div class=\"marge-img wow bounceInLeft col-xs-offset-4 col-xs-4\"><img class=\"img-responsive\" src=\"../img/manif0.png\" alt=\"\" /></div>
-
-                <div class=\"marge-img wow bounceInRight col-xs-offset-2 col-xs-8\"><img class=\"img-responsive\" src=\"../img/manif1.png\" alt=\"\" /></div>
-
-                <div class=\"marge-img wow bounceInLeft col-xs-offset-2 col-xs-8\"><img class=\"img-responsive\" src=\"../img/manif2.png\" alt=\"\" /></div>
-
-                <div class=\"marge-img wow bounceInRight col-xs-offset-2 col-xs-8\"><img class=\"img-responsive\" src=\"../img/manif3.png\" alt=\"\" /></div>
-
-                <div class=\"marge-img wow bounceInLeft col-xs-offset-2 col-xs-8\"><img class=\"img-responsive\" src=\"../img/manif4.png\" alt=\"\" /></div>
-
-                <div class=\"marge-img wow bounceInRight col-xs-offset-2 col-xs-8\"><img class=\"img-responsive\" src=\"../img/manif5.png\" alt=\"\" /></div>
-
-                <div class=\"marge-img wow bounceInLeft col-xs-offset-2 col-xs-8\"><img class=\"img-responsive\" src=\"../img/manif6.png\" alt=\"\" /></div>
-
-                <div class=\"marge-img wow bounceInRight col-xs-offset-2 col-xs-8\"><img class=\"img-responsive\" src=\"../img/manif7.png\" alt=\"\" /></div>
-
-                <div class=\"marge-img wow bounceInLeft col-xs-offset-2 col-xs-8\"><img class=\"img-responsive\" src=\"../img/manif8.png\" alt=\"\" /></div>
-
-                <div class=\"marge-img wow bounceInRight col-xs-offset-2 col-xs-8\"><img class=\"img-responsive\" src=\"../img/manif9.png\" alt=\"\" /></div>
-
-                <div class=\"marge-img wow bounceInRight col-xs-offset-4 col-xs-4\"><img class=\"img-responsive\" src=\"../img/manif10.png\" alt=\"\" /></div>
-
-
-            </div>
-            <!-- qui sommes nous -->
-            <div class=\"container\" id=\"qui\">
-                <h1 class=\"titles center\">Qui sommes nous ?</h1>
-
-                <div class=\"col-xs-offset-2 col-xs-3\"><img class=\"img-responsive\" src=\"../img/qui1.png\" alt=\"\" /></div>
-                <div class=\"col-xs-5\"><img class=\"img-responsive\" src=\"../img/marquisette_logo.png\" alt=\"\" /></div>
-
-            </div>
-
-
-            <div class=\"container prod \">
-                <div class=\"col-xs-offset-2 col-xs-8\">
-                    <h1 class=\"titles center\">Produit</h1>
-                    <p class=\"\">
-                        Boisson du sud de la France, la marquisette est connue dans des départements tels que l'Ardèche, la Drôme et le Gard. Originaires de l'Ardèche, les petits enfants Thibon ont connu la marquisette dans les bals d'été, les mariages, les baptêmes... Il existe autant de recettes que de villages. La recette traditionnelle de leur grand père, n'était autre qu'un subtil mélange de vin blanc, de vin pétillant, de limonade, aux senteurs d'agrumes et de rhum.La Marquisette Cesar Thibon est disponible en bouteille de 25 et 75cl.
-                    </p>
-                </div>
-
-                <div class=\"col-lg-2\"></div>
-            </div>
+<!-- Section PRODUIT ________________________________________________________-->
+       <section class=\"container prod \">
+          <div class=\"col-xs-offset-2 col-xs-8\">
+            <h1 class=\"titles center\">Produit</h1>
+            <p class=\"\">
+              Boisson du sud de la France, la marquisette est connue dans des départements tels que l'Ardèche, la Drôme et le Gard. Originaires de l'Ardèche, les petits enfants Thibon ont connu la marquisette dans les bals d'été, les mariages, les baptêmes... Il existe autant de recettes que de villages. La recette traditionnelle de leur grand père, n'était autre qu'un subtil mélange de vin blanc, de vin pétillant, de limonade, aux senteurs d'agrumes et de rhum.La Marquisette Cesar Thibon est disponible en bouteille de 25 et 75cl.
+            </p>
+          </div>
+        </section>
+<!-- Fin de la section produit_______________________________________________ -->
 
             <section class=\"container pdv\" id=\"point\">
                 <div class=\"col-xs-offset-2 col-xs-8\">
@@ -237,60 +217,62 @@ class __TwigTemplate_deb6de7a10dc8757dfde59740fd151f5e96ee2def3e080718fc5fee1502
 
             </section>
 
-            <!-- Section COntacts -->
-            <!-- FORMULAIRE MAIL -->
-            <footer class=\"fin-du-site\">
-                <div class=\"center\">
-                    <h3 class=\"padContactez\">Contactez nous</h3>
-                    <div id=\"form_contact\">
-                        <form action=\"http://localhost/process.php\" id=\"contact\" method=\"POST\">
-                            <p>
-                                <label for=\"nom\" class=\"nom\">Nom:</label>
-                                <input id=\"nom\" placeholder=\"Votre nom\" name=\"nom\" type=\"text\">
-                                <br /><span id=\"msg_nom\"></span>
-                            </p>
-                            <p>
-                                <label for=\"sujet\" class=\"sujet\">Sujet:</label>
-                                <input id=\"sujet\" placeholder=\"Sujet du message\" name=\"sujet\" type=\"text\">
-                                <br /><span id=\"msg_sujet\"></span>
-                            </p>
-                            <p>
-                                <label for=\"email\">Email:</label>
-                                <input id=\"email\" placeholder=\"vous@exemple.com\" name=\"email\" type=\"email\">
-                                <br /><span id=\"msg_email\"></span>
-                            </p>
-                            <p>
-                                <label for=\"message\">Message:</label>
-                                <textarea class=\"message-area\" id=\"message\" placeholder=\"...\" name=\"message\" rows=\"8\" cols=\"50\"></textarea>
-                                <br /><span id=\"msg_message\"></span>
-                            </p>
-                            <p>
-                                <input id=\"send\" type=\"submit\" value=\"Envoyer\" />
-                            </p>
-                        </form>
-                        <span id=\"msg_all\"></span>
-                        <p id=\"test\"></p>
-                    </div>
-                </div>
-            </footer>
-            <!-- Fin du formulaire -->
-            <footer class=\"col-lg-12 endSite\">
-                <p>
-                    cesarthibon@lamarquisette.fr
-                </p>
-                <p>
-                    06 99 79 64 13
-                </p>
-                <p>
-                    © Nous
-                </p>
-            </footer>
+       <!-- Section COntacts -->
+<!-- FORMULAIRE MAIL -->
+    <footer class=\"container fin-du-site center\">
+      <div class=\"col-xs-offset-2 col-xs-8\">
+        <h1 class=\"titles center padContactez\">Contactez nous</h1>
+        <div id=\"form_contact\">
+  <!-- On attaque le bon fichier PHP pour l'envoi de mail -->
+  <form action=\"http://localhost/process.php\" id=\"contact\" method=\"POST\">
+    <p>
+      <label for=\"nom\" class=\"nom\">Nom:</label>
+      <input id=\"nom\" placeholder=\"Votre nom\" name=\"nom\" type=\"text\">
+        <br /><span id=\"msg_nom\"></span>
+    </p>
+    <p>
+      <label for=\"sujet\" class=\"sujet\">Sujet:</label>
+      <input id=\"sujet\" placeholder=\"Sujet du message\" name=\"sujet\" type=\"text\">
+        <br /><span id=\"msg_sujet\"></span>
+    </p>
+    <p>
+      <label for=\"email\">Email:</label>
+      <input id=\"email\" placeholder=\"vous@exemple.com\" name=\"email\" type=\"email\">
+        <br /><span id=\"msg_email\"></span>
+    </p>
+    <p>
+      <label for=\"message\">Message:</label>
+      <textarea class=\"message-area\" id=\"message\" placeholder=\"...\" name=\"message\" rows=\"8\" cols=\"50\"></textarea>
+        <br /><span id=\"msg_message\"></span>
+    </p>
+    <p>
+      <input class=\"boutonSend\" id=\"send\" type=\"submit\" value=\"Envoyer\" />
+    </p>
+              <p id=\"msgConfirm\"></p>
+
+</form>
+
+</div>
+</div>
+</footer>
+<!-- Fin du formulaire -->
+<footer class=\"col-lg-12 endSite\">
+  <p>
+  cesarthibon@lamarquisette.fr
+  </p>
+  <p>
+    06 99 79 64 13
+  </p>
+  <p>
+    © Nous
+  </p>
+</footer>
 
         </body>
     </html>
 ";
         
-        $__internal_0d212b461afad5f3de44b3ac2e4386e9d46a748e96cde44abaada9b554226b06->leave($__internal_0d212b461afad5f3de44b3ac2e4386e9d46a748e96cde44abaada9b554226b06_prof);
+        $__internal_ba7c1dcafc345af359b8685adca32a0ba74c7163aab20daa943f4283c4242081->leave($__internal_ba7c1dcafc345af359b8685adca32a0ba74c7163aab20daa943f4283c4242081_prof);
 
     }
 
@@ -364,105 +346,85 @@ class __TwigTemplate_deb6de7a10dc8757dfde59740fd151f5e96ee2def3e080718fc5fee1502
 /* */
 /*         <div id = "val" style="display:none">{{i}}</div>*/
 /* */
-/*             <nav id = "navi">*/
-/*                 <ul>*/
-/*                     <a class="js-scrollTo" href = ".hist">*/
-/*                         <span class="dot bulle1">*/
-/*                         </span>*/
-/*                     </a>*/
-/*                     <a class="js-scrollTo" href = "#manif">*/
-/*                         <span class="dot bulle1-1">*/
-/*                         </span>*/
-/*                     </a>*/
-/*                     <a class="js-scrollTo" href = "#qui">*/
-/*                         <span class="dot bulle1-2">*/
-/*                         </span>*/
-/*                     </a>*/
-/*                     <a class="js-scrollTo" href = ".prod">*/
-/*                         <span class="dot bulle2"></span>*/
-/*                     </a>*/
-/*                     <a class="js-scrollTo" href = ".prodorigines">*/
-/*                         <span class="dot bulle2-1"></span>*/
-/*                     </a>*/
-/*                     <a class="js-scrollTo" href = ".recipe">*/
-/*                         <span class="dot bulle2-2"></span>*/
-/*                     </a>*/
-/*                     <a class="js-scrollTo" href = "#point">*/
-/*                         <span class="dot bulle3"></span>*/
-/*                     </a>*/
-/*                 </ul>*/
-/*             </nav>*/
+/* <!-- Menu de navigation (petites bulles sur la gauche de la vue) -->*/
+/*      <nav id = "navi">*/
+/*           <ul>*/
+/*               <a class="js-scrollTo" href = ".hist"><!--fonction smooth scroll-->*/
+/*                  <span class="dot bulle1"></span>*/
+/*               </a>*/
+/*               <a class="js-scrollTo" href = "#manif"><!--fonction smooth scroll-->*/
+/*                  <span class="dot bulle1-1"></span>*/
+/*               </a>*/
+/*               <a class="js-scrollTo" href = "#qui"><!--fonction smooth scroll-->*/
+/*                <span class="dot bulle1-2"></span>*/
+/*               </a>*/
+/*               <a class="js-scrollTo" href = ".prod"><!--fonction smooth scroll-->*/
+/*                 <span class="dot bulle2"></span>*/
+/*               </a>*/
+/*               <a class="js-scrollTo" href = "#point"><!--fonction smooth scroll-->*/
+/*                <span class="dot bulle3"></span>*/
+/*              </a>*/
+/*           </ul>*/
+/*      </nav>*/
+/*      <!-- Carousel du haut___________________________________________________-->*/
+/*        <div id="myCarousel" class="carousel slide hist">*/
+/*          <!-- bulles control du carousel -->*/
+/*          <ol class="carousel-indicators">*/
+/*            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>*/
+/*            <li data-target="#myCarousel" data-slide-to="1"></li>*/
+/*            <li data-target="#myCarousel" data-slide-to="2"></li>*/
+/*          </ol>*/
 /* */
-/*             <div id="myCarousel" class="carousel slide hist">*/
-/*                 <!-- Indicators -->*/
-/*                 <ol class="carousel-indicators">*/
-/*                     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>*/
-/*                     <li data-target="#myCarousel" data-slide-to="1"></li>*/
-/*                     <li data-target="#myCarousel" data-slide-to="2"></li>*/
-/*                 </ol>*/
+/*          <!-- Images/items du carousel -->*/
+/*          <div class="carousel-inner">*/
 /* */
-/*                 <!-- Wrapper for slides -->*/
-/*                 <div class="carousel-inner">*/
+/*            <div class="item active img1"></div>*/
 /* */
-/*                     <div class="item active img1"></div>*/
+/*            <div class="item img2"></div>*/
 /* */
-/*                     <div class="item img2"></div>*/
+/*            <div class="item img3"></div>*/
 /* */
-/*                     <div class="item img3"></div>*/
+/*          </div>*/
+/*        </div>*/
+/* <!-- manifeste _____________________________________________________________-->*/
+/*       <section class="container" id="manif">*/
 /* */
-/*                 </div>*/
-/*             </div>*/
-/*             <!-- manifest -->*/
-/*             <div class="container" id="manif">*/
+/*         <div class="center">*/
+/*           <img class="" src="../img/marquisette_logo.png" alt="logo" />*/
+/*         </div>*/
+/*            <div class="marge-img wow bounceInLeft col-xs-offset-4 col-xs-4"><img class="img-responsive" src="../img/manif0.png" alt="" /></div>*/
+/*            <div class="marge-img wow bounceInRight col-xs-offset-2 col-xs-8"><img class="img-responsive" src="../img/manif1.png" alt="" /></div>*/
+/*            <div class="marge-img wow bounceInLeft col-xs-offset-2 col-xs-8"><img class="img-responsive" src="../img/manif2.png" alt="" /></div>*/
+/*            <div class="marge-img wow bounceInRight col-xs-offset-2 col-xs-8"><img class="img-responsive" src="../img/manif3.png" alt="" /></div>*/
+/*            <div class="marge-img wow bounceInLeft col-xs-offset-2 col-xs-8"><img class="img-responsive" src="../img/manif4.png" alt="" /></div>*/
+/*            <div class="marge-img wow bounceInRight col-xs-offset-2 col-xs-8"><img class="img-responsive" src="../img/manif5.png" alt="" /></div>*/
+/*            <div class="marge-img wow bounceInLeft col-xs-offset-2 col-xs-8"><img class="img-responsive" src="../img/manif6.png" alt="" /></div>*/
+/*            <div class="marge-img wow bounceInRight col-xs-offset-2 col-xs-8"><img class="img-responsive" src="../img/manif7.png" alt="" /></div>*/
+/*            <div class="marge-img wow bounceInLeft col-xs-offset-2 col-xs-8"><img class="img-responsive" src="../img/manif8.png" alt="" /></div>*/
+/*            <div class="marge-img wow bounceInRight col-xs-offset-2 col-xs-8"><img class="img-responsive" src="../img/manif9.png" alt="" /></div>*/
+/*            <div class="marge-img wow bounceInRight col-xs-offset-4 col-xs-4"><img class="img-responsive" src="../img/manif10.png" alt="" /></div>*/
+/*        </section>*/
+/* <!--section qui sommes nous_________________________________________________ -->*/
+/*        <section class="container" id="qui">*/
+/*          <div class="col-xs-offset-2 col-xs-8">*/
+/*            <h1 class="titles center">Qui sommes nous ?</h1>*/
 /* */
-/*                 <div class="center">*/
-/*                     <img class="" src="../img/marquisette_logo.png" alt="logo" />*/
-/*                 </div>*/
+/*            <div class="col-xs-offset-2 col-xs-3"><img class="img-responsive" src="../img/qui1.png" alt="" /></div>*/
+/*            <div class="col-xs-5"><img class="img-responsive" src="../img/marquisette_logo.png" alt="" /></div>*/
+/*          </div>*/
+/*         </section>*/
+/* <!-- Fin de la section qui sommes nous ______________________________________-->*/
 /* */
-/*                 <div class="marge-img wow bounceInLeft col-xs-offset-4 col-xs-4"><img class="img-responsive" src="../img/manif0.png" alt="" /></div>*/
-/* */
-/*                 <div class="marge-img wow bounceInRight col-xs-offset-2 col-xs-8"><img class="img-responsive" src="../img/manif1.png" alt="" /></div>*/
-/* */
-/*                 <div class="marge-img wow bounceInLeft col-xs-offset-2 col-xs-8"><img class="img-responsive" src="../img/manif2.png" alt="" /></div>*/
-/* */
-/*                 <div class="marge-img wow bounceInRight col-xs-offset-2 col-xs-8"><img class="img-responsive" src="../img/manif3.png" alt="" /></div>*/
-/* */
-/*                 <div class="marge-img wow bounceInLeft col-xs-offset-2 col-xs-8"><img class="img-responsive" src="../img/manif4.png" alt="" /></div>*/
-/* */
-/*                 <div class="marge-img wow bounceInRight col-xs-offset-2 col-xs-8"><img class="img-responsive" src="../img/manif5.png" alt="" /></div>*/
-/* */
-/*                 <div class="marge-img wow bounceInLeft col-xs-offset-2 col-xs-8"><img class="img-responsive" src="../img/manif6.png" alt="" /></div>*/
-/* */
-/*                 <div class="marge-img wow bounceInRight col-xs-offset-2 col-xs-8"><img class="img-responsive" src="../img/manif7.png" alt="" /></div>*/
-/* */
-/*                 <div class="marge-img wow bounceInLeft col-xs-offset-2 col-xs-8"><img class="img-responsive" src="../img/manif8.png" alt="" /></div>*/
-/* */
-/*                 <div class="marge-img wow bounceInRight col-xs-offset-2 col-xs-8"><img class="img-responsive" src="../img/manif9.png" alt="" /></div>*/
-/* */
-/*                 <div class="marge-img wow bounceInRight col-xs-offset-4 col-xs-4"><img class="img-responsive" src="../img/manif10.png" alt="" /></div>*/
-/* */
-/* */
-/*             </div>*/
-/*             <!-- qui sommes nous -->*/
-/*             <div class="container" id="qui">*/
-/*                 <h1 class="titles center">Qui sommes nous ?</h1>*/
-/* */
-/*                 <div class="col-xs-offset-2 col-xs-3"><img class="img-responsive" src="../img/qui1.png" alt="" /></div>*/
-/*                 <div class="col-xs-5"><img class="img-responsive" src="../img/marquisette_logo.png" alt="" /></div>*/
-/* */
-/*             </div>*/
-/* */
-/* */
-/*             <div class="container prod ">*/
-/*                 <div class="col-xs-offset-2 col-xs-8">*/
-/*                     <h1 class="titles center">Produit</h1>*/
-/*                     <p class="">*/
-/*                         Boisson du sud de la France, la marquisette est connue dans des départements tels que l'Ardèche, la Drôme et le Gard. Originaires de l'Ardèche, les petits enfants Thibon ont connu la marquisette dans les bals d'été, les mariages, les baptêmes... Il existe autant de recettes que de villages. La recette traditionnelle de leur grand père, n'était autre qu'un subtil mélange de vin blanc, de vin pétillant, de limonade, aux senteurs d'agrumes et de rhum.La Marquisette Cesar Thibon est disponible en bouteille de 25 et 75cl.*/
-/*                     </p>*/
-/*                 </div>*/
-/* */
-/*                 <div class="col-lg-2"></div>*/
-/*             </div>*/
+/* <!-- Section PRODUIT ________________________________________________________-->*/
+/*        <section class="container prod ">*/
+/*           <div class="col-xs-offset-2 col-xs-8">*/
+/*             <h1 class="titles center">Produit</h1>*/
+/*             <p class="">*/
+/*               Boisson du sud de la France, la marquisette est connue dans des départements tels que l'Ardèche, la Drôme et le Gard. Originaires de l'Ardèche, les petits enfants Thibon ont connu la marquisette dans les bals d'été, les mariages, les baptêmes... Il existe autant de recettes que de villages. La recette traditionnelle de leur grand père, n'était autre qu'un subtil mélange de vin blanc, de vin pétillant, de limonade, aux senteurs d'agrumes et de rhum.La Marquisette Cesar Thibon est disponible en bouteille de 25 et 75cl.*/
+/*             </p>*/
+/*           </div>*/
+/*         </section>*/
+/* <!-- Fin de la section produit_______________________________________________ -->*/
 /* */
 /*             <section class="container pdv" id="point">*/
 /*                 <div class="col-xs-offset-2 col-xs-8">*/
@@ -475,54 +437,56 @@ class __TwigTemplate_deb6de7a10dc8757dfde59740fd151f5e96ee2def3e080718fc5fee1502
 /* */
 /*             </section>*/
 /* */
-/*             <!-- Section COntacts -->*/
-/*             <!-- FORMULAIRE MAIL -->*/
-/*             <footer class="fin-du-site">*/
-/*                 <div class="center">*/
-/*                     <h3 class="padContactez">Contactez nous</h3>*/
-/*                     <div id="form_contact">*/
-/*                         <form action="http://localhost/process.php" id="contact" method="POST">*/
-/*                             <p>*/
-/*                                 <label for="nom" class="nom">Nom:</label>*/
-/*                                 <input id="nom" placeholder="Votre nom" name="nom" type="text">*/
-/*                                 <br /><span id="msg_nom"></span>*/
-/*                             </p>*/
-/*                             <p>*/
-/*                                 <label for="sujet" class="sujet">Sujet:</label>*/
-/*                                 <input id="sujet" placeholder="Sujet du message" name="sujet" type="text">*/
-/*                                 <br /><span id="msg_sujet"></span>*/
-/*                             </p>*/
-/*                             <p>*/
-/*                                 <label for="email">Email:</label>*/
-/*                                 <input id="email" placeholder="vous@exemple.com" name="email" type="email">*/
-/*                                 <br /><span id="msg_email"></span>*/
-/*                             </p>*/
-/*                             <p>*/
-/*                                 <label for="message">Message:</label>*/
-/*                                 <textarea class="message-area" id="message" placeholder="..." name="message" rows="8" cols="50"></textarea>*/
-/*                                 <br /><span id="msg_message"></span>*/
-/*                             </p>*/
-/*                             <p>*/
-/*                                 <input id="send" type="submit" value="Envoyer" />*/
-/*                             </p>*/
-/*                         </form>*/
-/*                         <span id="msg_all"></span>*/
-/*                         <p id="test"></p>*/
-/*                     </div>*/
-/*                 </div>*/
-/*             </footer>*/
-/*             <!-- Fin du formulaire -->*/
-/*             <footer class="col-lg-12 endSite">*/
-/*                 <p>*/
-/*                     cesarthibon@lamarquisette.fr*/
-/*                 </p>*/
-/*                 <p>*/
-/*                     06 99 79 64 13*/
-/*                 </p>*/
-/*                 <p>*/
-/*                     © Nous*/
-/*                 </p>*/
-/*             </footer>*/
+/*        <!-- Section COntacts -->*/
+/* <!-- FORMULAIRE MAIL -->*/
+/*     <footer class="container fin-du-site center">*/
+/*       <div class="col-xs-offset-2 col-xs-8">*/
+/*         <h1 class="titles center padContactez">Contactez nous</h1>*/
+/*         <div id="form_contact">*/
+/*   <!-- On attaque le bon fichier PHP pour l'envoi de mail -->*/
+/*   <form action="http://localhost/process.php" id="contact" method="POST">*/
+/*     <p>*/
+/*       <label for="nom" class="nom">Nom:</label>*/
+/*       <input id="nom" placeholder="Votre nom" name="nom" type="text">*/
+/*         <br /><span id="msg_nom"></span>*/
+/*     </p>*/
+/*     <p>*/
+/*       <label for="sujet" class="sujet">Sujet:</label>*/
+/*       <input id="sujet" placeholder="Sujet du message" name="sujet" type="text">*/
+/*         <br /><span id="msg_sujet"></span>*/
+/*     </p>*/
+/*     <p>*/
+/*       <label for="email">Email:</label>*/
+/*       <input id="email" placeholder="vous@exemple.com" name="email" type="email">*/
+/*         <br /><span id="msg_email"></span>*/
+/*     </p>*/
+/*     <p>*/
+/*       <label for="message">Message:</label>*/
+/*       <textarea class="message-area" id="message" placeholder="..." name="message" rows="8" cols="50"></textarea>*/
+/*         <br /><span id="msg_message"></span>*/
+/*     </p>*/
+/*     <p>*/
+/*       <input class="boutonSend" id="send" type="submit" value="Envoyer" />*/
+/*     </p>*/
+/*               <p id="msgConfirm"></p>*/
+/* */
+/* </form>*/
+/* */
+/* </div>*/
+/* </div>*/
+/* </footer>*/
+/* <!-- Fin du formulaire -->*/
+/* <footer class="col-lg-12 endSite">*/
+/*   <p>*/
+/*   cesarthibon@lamarquisette.fr*/
+/*   </p>*/
+/*   <p>*/
+/*     06 99 79 64 13*/
+/*   </p>*/
+/*   <p>*/
+/*     © Nous*/
+/*   </p>*/
+/* </footer>*/
 /* */
 /*         </body>*/
 /*     </html>*/

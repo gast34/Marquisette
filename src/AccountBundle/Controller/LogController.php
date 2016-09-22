@@ -45,7 +45,7 @@ class LogController extends Controller {
         $em = $this->getDoctrine()->getManager();
         $marqueur = $this->getDoctrine()->getManager()->getRepository("AccountBundle:PointsVente");
         $results = $marqueur->findAll();
-        
+
         $user = new User();
         $point = new PointsVente();
 
@@ -70,16 +70,39 @@ class LogController extends Controller {
         if ($request->getMethod() == 'POST') {
             $point->setAdresse($request->get('adresse'));
 
-            $point->setDescription("ouiiii");
+            $point->setDescription($request->get('description'));
             $point->setLatitude($request->get('latitude'));
             $point->setLongitude($request->get('longitude'));
 
             $em->persist($point);
             $em->flush();
+             return $this->redirectToRoute("gestion");
         }
 
 
-        return $this->render('AccountBundle:Default:gestion.html.twig', array('form' => $form->createView() , 'points' => $results));
+        return $this->render('AccountBundle:Default:gestion.html.twig', array('form' => $form->createView(), 'points' => $results));
+    }
+
+    /**
+     * @Route("/supprimer/{nom}")
+     */
+    function deleteAction($nom) {
+
+
+        $em = $this->getDoctrine()->getManager();
+
+        $repository = $this
+                ->getDoctrine()
+                ->getManager()
+                ->getRepository('AccountBundle:PointsVente');
+
+        $point = $repository->findOneBy(array('description' => $nom));
+
+        $em->remove($point);
+        $em->flush();
+
+        return $this->redirectToRoute("gestion");
+
     }
 
 }
