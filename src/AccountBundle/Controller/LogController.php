@@ -81,7 +81,6 @@ class LogController extends Controller {
             return $this->redirect("gestion");
         }
 
-
         return $this->render('AccountBundle:Default:gestion.html.twig', array('form' => $form->createView(), 'points' => $results , 'users' => $results_use));
     }
     /**

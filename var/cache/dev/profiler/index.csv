@@ -1177,3 +1177,7 @@ a6f8c9,192.168.1.31,GET,http://192.168.1.31/Marquisette/web/app_dev.php/supprime
 bce0a1,192.168.1.31,POST,http://192.168.1.31/Marquisette/web/app_dev.php/gestion,1474554768,,302
 36302e,192.168.1.31,GET,http://192.168.1.31/Marquisette/web/app_dev.php/gestion,1474554768,,200
 5a78dc,192.168.1.31,GET,http://192.168.1.31/Marquisette/web/app_dev.php/gestion,1474554770,,200
+1e26f9,192.168.1.31,GET,http://192.168.1.31/Marquisette/web/app_dev.php/gestion,1474555328,,200
+a63c42,192.168.1.31,GET,http://192.168.1.31/Marquisette/web/app_dev.php/Marquis,1474555677,,200
+53d4ea,192.168.1.31,GET,http://192.168.1.31/Marquisette/web/app_dev.php/Marquis,1474555697,,200
+3a989e,192.168.1.31,GET,http://192.168.1.31/Marquisette/web/app_dev.php/Marquis,1474555728,,200

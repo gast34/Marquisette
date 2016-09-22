@@ -15,8 +15,8 @@ class __TwigTemplate_deb6de7a10dc8757dfde59740fd151f5e96ee2def3e080718fc5fee1502
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_ba7c1dcafc345af359b8685adca32a0ba74c7163aab20daa943f4283c4242081 = $this->env->getExtension("native_profiler");
-        $__internal_ba7c1dcafc345af359b8685adca32a0ba74c7163aab20daa943f4283c4242081->enter($__internal_ba7c1dcafc345af359b8685adca32a0ba74c7163aab20daa943f4283c4242081_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "mainBundle:Default:index.html.twig"));
+        $__internal_85a5aa9aa6ecae54c337fd573fac99a3ee1d9cfa79f90d15881efd1ae0ac4e21 = $this->env->getExtension("native_profiler");
+        $__internal_85a5aa9aa6ecae54c337fd573fac99a3ee1d9cfa79f90d15881efd1ae0ac4e21->enter($__internal_85a5aa9aa6ecae54c337fd573fac99a3ee1d9cfa79f90d15881efd1ae0ac4e21_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "mainBundle:Default:index.html.twig"));
 
         // line 1
         echo "<html>
@@ -241,8 +241,7 @@ class __TwigTemplate_deb6de7a10dc8757dfde59740fd151f5e96ee2def3e080718fc5fee1502
         <br /><span id=\"msg_email\"></span>
     </p>
     <p>
-      <label for=\"message\">Message:</label>
-      <textarea class=\"message-area\" id=\"message\" placeholder=\"...\" name=\"message\" rows=\"8\" cols=\"50\"></textarea>
+      <textarea class=\"message-area\" id=\"message\" placeholder=\"Votre message\" name=\"message\" rows=\"8\" cols=\"50\"></textarea>
         <br /><span id=\"msg_message\"></span>
     </p>
     <p>
@@ -272,7 +271,7 @@ class __TwigTemplate_deb6de7a10dc8757dfde59740fd151f5e96ee2def3e080718fc5fee1502
     </html>
 ";
         
-        $__internal_ba7c1dcafc345af359b8685adca32a0ba74c7163aab20daa943f4283c4242081->leave($__internal_ba7c1dcafc345af359b8685adca32a0ba74c7163aab20daa943f4283c4242081_prof);
+        $__internal_85a5aa9aa6ecae54c337fd573fac99a3ee1d9cfa79f90d15881efd1ae0ac4e21->leave($__internal_85a5aa9aa6ecae54c337fd573fac99a3ee1d9cfa79f90d15881efd1ae0ac4e21_prof);
 
     }
 
@@ -461,8 +460,7 @@ class __TwigTemplate_deb6de7a10dc8757dfde59740fd151f5e96ee2def3e080718fc5fee1502
 /*         <br /><span id="msg_email"></span>*/
 /*     </p>*/
 /*     <p>*/
-/*       <label for="message">Message:</label>*/
-/*       <textarea class="message-area" id="message" placeholder="..." name="message" rows="8" cols="50"></textarea>*/
+/*       <textarea class="message-area" id="message" placeholder="Votre message" name="message" rows="8" cols="50"></textarea>*/
 /*         <br /><span id="msg_message"></span>*/
 /*     </p>*/
 /*     <p>*/
