@@ -43,6 +43,9 @@ class LogController extends Controller {
     public function gestionAction(Request $request) {
 
         $em = $this->getDoctrine()->getManager();
+        $marqueur = $this->getDoctrine()->getManager()->getRepository("AccountBundle:PointsVente");
+        $results = $marqueur->findAll();
+        
         $user = new User();
         $point = new PointsVente();
 
@@ -76,7 +79,7 @@ class LogController extends Controller {
         }
 
 
-        return $this->render('AccountBundle:Default:gestion.html.twig', array('form' => $form->createView()));
+        return $this->render('AccountBundle:Default:gestion.html.twig', array('form' => $form->createView() , 'points' => $results));
     }
 
 }
