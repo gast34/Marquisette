@@ -115,17 +115,37 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return array (  '_controller' => 'AccountBundle\\Controller\\LogController::gestionAction',  '_route' => 'gestion',);
         }
 
-        if (0 === strpos($pathinfo, '/supprimer')) {
-            // account_log_deletepoint
-            if (0 === strpos($pathinfo, '/supprimer/points') && preg_match('#^/supprimer/points/(?P<nom>[^/]++)$#s', $pathinfo, $matches)) {
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'account_log_deletepoint')), array (  '_controller' => 'AccountBundle\\Controller\\LogController::deletePointAction',));
+        if (0 === strpos($pathinfo, '/a')) {
+            // account_log_ajoutdevis
+            if ($pathinfo === '/ajoutDevis') {
+                return array (  '_controller' => 'AccountBundle\\Controller\\LogController::ajoutDevisAction',  '_route' => 'account_log_ajoutdevis',);
             }
 
-            // account_log_deleteuserst
-            if (0 === strpos($pathinfo, '/supprimer/users') && preg_match('#^/supprimer/users/(?P<nom>[^/]++)$#s', $pathinfo, $matches)) {
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'account_log_deleteuserst')), array (  '_controller' => 'AccountBundle\\Controller\\LogController::deleteUserstAction',));
+            // account_log_addpoint
+            if ($pathinfo === '/addPoints') {
+                return array (  '_controller' => 'AccountBundle\\Controller\\LogController::AddPointAction',  '_route' => 'account_log_addpoint',);
             }
 
+        }
+
+        // account_log_deletepoint
+        if (0 === strpos($pathinfo, '/supprimer/points') && preg_match('#^/supprimer/points/(?P<nom>[^/]++)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'account_log_deletepoint')), array (  '_controller' => 'AccountBundle\\Controller\\LogController::deletePointAction',));
+        }
+
+        // account_log_ajoutusers
+        if ($pathinfo === '/ajoutUsers') {
+            return array (  '_controller' => 'AccountBundle\\Controller\\LogController::ajoutUsersAction',  '_route' => 'account_log_ajoutusers',);
+        }
+
+        // account_log_deleteusers
+        if (0 === strpos($pathinfo, '/supprimer/users') && preg_match('#^/supprimer/users/(?P<nom>[^/]++)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'account_log_deleteusers')), array (  '_controller' => 'AccountBundle\\Controller\\LogController::deleteUsersAction',));
+        }
+
+        // account_log_modifpass
+        if ($pathinfo === '/modifierPass') {
+            return array (  '_controller' => 'AccountBundle\\Controller\\LogController::ModifPassAction',  '_route' => 'account_log_modifpass',);
         }
 
         // login

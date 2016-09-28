@@ -11,7 +11,7 @@ $("#gene").click(function(){
        mdp += chaine[pos];
       
     }
-     $('#form_Password').val(mdp);
+     $('#user_password').val(mdp);
 
   });
 

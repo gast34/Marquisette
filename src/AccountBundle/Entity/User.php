@@ -11,7 +11,7 @@ use Symfony\Component\Security\Core\User\UserInterface;
  * @ORM\Table(name="user")
  * @ORM\Entity(repositoryClass="AccountBundle\Repository\UserRepository")
  */
-class User implements UserInterface {
+class User implements UserInterface , \Serializable {
 
     /**
      * @var int
@@ -156,14 +156,6 @@ class User implements UserInterface {
         return $this->roles;
     }
     
-    
-    
-    
-    
-    
-    
-    
-    
     /**
      * Set mail
      *
@@ -190,5 +182,26 @@ class User implements UserInterface {
     public function eraseCredentials() {
         
     }
+
+    public function serialize() {
+       return serialize(array(
+           $this->id,
+           $this->username,
+           $this->password,
+           $this->mail,
+           $this->roles
+           
+       ));
+   }
+
+   public function unserialize($serialized) {
+       list(
+               $this->id,
+               $this->username,
+               $this->password,
+               $this->mail,
+               $this->roles
+               ) = unserialize($serialized);
+   }
 
 }

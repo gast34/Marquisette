@@ -5,15 +5,7 @@ security:
     Symfony\Component\Security\Core\User\User: plaintext
     AccountBundle\Entity\User : plaintext
     
-  role_hierarchy:
 
-        # Un admin hérite des droits d'auteur et de modérateur
-
-        ROLE_ADMIN:       [ROLE_AUTEUR, ROLE_MODERATEUR]
-
-        # On garde ce rôle superadmin, il nous resservira par la suite
-
-        ROLE_SUPER_ADMIN: [ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH]
 
 
 
@@ -39,4 +31,6 @@ security:
 
   access_control:
 
+      - { path: ^/, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+      - { path: ^/, roles: ROLE_USER }
       #- { path: ^/connexion, roles: IS_AUTHENTICATED_ANONYMOUSLY, requires_channel: https }

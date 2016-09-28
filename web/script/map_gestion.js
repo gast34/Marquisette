@@ -11,7 +11,6 @@ function initMap() {
 
     var nb_mark = parseInt($('#val').text());
 
-
     var tab_coo = new Array();
     var tab_titre = new Array();
 
@@ -39,36 +38,32 @@ function initMap() {
 
 
 }
-function TrouverAdresse() {
+function TrouverAdresse() {//Fonction pour ajouter un point de repère sur la carte
 
     // Récupération de l'adresse tapée dans le formulaire
     var adresse = document.getElementById('adresse').value;
     var description = $('#description').val();
     geocoder.geocode({'address': adresse}, function (results, status) {
         if (status === google.maps.GeocoderStatus.OK) {
+            
             $.ajax({
-                url: 'gestion',
-                type: 'POST', // Le type de la requête HTTP, ici devenu POST
-
+                url: 'addPoints',
+                type: 'POST',
                 data: 'adresse=' + adresse + '&longitude=' + results[0].geometry.location.lng()
                         + '&latitude=' + results[0].geometry.location.lat() + '&description=' + description,
-                // On fait passer nos variables, exactement comme en GET, au script more_com.php
-
                 dataType: 'string'
 
             });
-            
-            
+
+            //Centre la carte sur le point trouvé
             map.setCenter(results[0].geometry.location);
-            // Récupération des coordonnées GPS du lieu tapé dans le formulaire
-            
 
             // Création du marqueur du lieu (épingle)
             var marker = new google.maps.Marker({
                 map: map,
                 position: results[0].geometry.location
             });
-            
+
         } else {
             alert('Adresse introuvable: ' + status);
         }
@@ -78,8 +73,41 @@ function TrouverAdresse() {
 }
 $('document').ready(function () {
 
+    //Fonction ajouter User//
+    $('#ajout').click(function () {
+        
+        $.ajax({
+            url: 'ajoutUsers',
+            type: 'POST',
+            data: 'username=' + $('#user_username').val() + '&password=' + $('#user_password').val()+
+            '&mail=' + $('#user_mail').val(),
+            dataType: 'text',
+            success: function (data, textStatus, jqXHR) {
+                 alert(data);
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                alert(textStatus);
+            }
+
+        });
+    });
+    
+    $('#envoy').submit(function (e) {
+       
+        e.prevenDefault();//Annule l'envoi du formulaire pour l'envoyer en ajax ci dessous
+        $.ajax({
+            url: 'http://localhost/Marquisette/web/app_dev.php/ajoutDevis',
+            type: "POST",            
+            data: $("#envoy").serialize(),
+            dataType: 'text',
+            success: function (data, textStatus, jqXHR) {
+                alert(data);
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                alert(textStatus);
+            }
+
+        });
+    });
+    
 });
-
-
-
-

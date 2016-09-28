@@ -1,6 +1,11 @@
 <body>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        
+        <script src ="../script/modif.js"></script>
+        
+        <link rel="stylesheet" href ="../gestion.css">
     {%if app.user.username == "gast34"%}
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
         <script src ="../script/generation.js"></script>
         <script async defer
                 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA2tZpX31pxKdUuGC9w4u-zPnqbwSWSMSg&callback=initMap">
@@ -10,21 +15,26 @@
             html, body { height: 100%; margin: 0; padding: 0; }
             #map { height: 70%; width:50%}
         </style>
-        <link rel="stylesheet" href ="../gestion.css">
+        
 
 
         Génération : <br>
+        {{form(form_user)}}
+        <input id ="ajout" type ="button" value ="Ajouter"/><br>
+        <input id ="gene" type ="button" value ="Générer"/><br>
 
-        {{form(form)}}<input id ="gene" type ="button" value ="Générer"/>
+
 
         {%set i = 0%}
-        {%for resultats in users%}
-            {%set i = i + 1%} 
+        {%for resultats in users %}
+            {%set i = i + 1%}
 
             {%if i != 1%}
 
                 <div class = "point_contain">
+
                     <a href = "supprimer/users/{{resultats.username}}"><input class="suppr" type="button" value="Supprimer"/></a>
+
                     Nom : {{resultats.username}}<br>
                     Mot de Passe : {{resultats.password}}<br>
                     Email: {{resultats.mail}}<br>
@@ -33,6 +43,27 @@
             {%endif%}
 
         {%endfor%}
+
+
+
+        <form id = "envoy" method="post" action="ajoutDevis" enctype="multipart/form-data">
+            Envoyer un devis à <select id = "choix" name="select">
+
+                {%set x = 0%}
+                {%for resultats in users%}
+                    {%set x = x + 1%} 
+
+                    {%if x != 1%}
+                        <option value="{{resultats.username}}">{{resultats.username}}</option>
+
+                    {%endif%}
+
+                {%endfor%}
+            </select>
+
+            <br><input type="file" id="fichier" name = "devis" /><br>
+            <input type="submit" value ="Envoyer"/>
+        </form>
 
         <br>Mettre Points de ventes :
         <input type="text" id="description" placeholder="Déscription du point de vente"/>
@@ -68,9 +99,31 @@
 
         <div id = "val" style="display:none">{{i}}</div>
 
-        <br>ajouterDevis
+        <br>
 
-    {%else%}Recup devis
+    {%else%}
+        <div id ="username" >{{app.user.username}}</div>
+        <input id="modif" type="button" value="Modifier mot de passe"/><br>
+
+        <div id="form_modif" style="display:none">
+
+            <input id ="modif_pass_actu" type="password" placeholder="Mot de pass actuel"/><br>
+            <input id ="modif_pass_new" type="password" placeholder="Nouveau mot de passe"/><br>
+            <input id ="modif_pass_new_conf" type="password" placeholder="Confirmer nouveau mot de passe"/><br>
+            <input id ="modif_conf" type="button" value="Confirmer"/>
+
+        </div>
+
+
+
+
+        Recup devis
+        {%for resultsDevis in devis%}
+            {% if app.user.username == resultsDevis.Prop%}
+                <a href ="../{{resultsDevis.src}}">{{resultsDevis.Nom}}</a>
+            {%endif%}
+
+        {%endfor%}
     {%endif%}
 </body>
 

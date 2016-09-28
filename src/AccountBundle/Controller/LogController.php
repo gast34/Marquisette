@@ -2,34 +2,29 @@
 
 namespace AccountBundle\Controller;
 
-use AccountBundle\Entity\User;
+use AccountBundle\Entity\Devis;
 use AccountBundle\Entity\PointsVente;
+use AccountBundle\Entity\User;
+use AccountBundle\Form\UserType;
+use DateTime;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Symfony\Component\Form\Extension\Core\Type\EmailType;
-use Symfony\Component\Form\Extension\Core\Type\SubmitType;
-use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 
 class LogController extends Controller {
 
     /**
      * @Route("/connexion")
      */
-    public function connecAction() {
-
-
+    public function connecAction() {//Fonction pour connecter l'utilisateur
         if ($this->get('security.authorization_checker')->isGranted('IS_AUTHENTICATED_REMEMBERED')) {
 
-            return $this->redirectToRoute('Marquis');
+            return $this->redirectToRoute('Marquis'); //Retour sur la page principal//
         }
 
-        // Le service authentication_utils permet de récupérer le nom d'utilisateur
-        // et l'erreur dans le cas où le formulaire a déjà été soumis mais était invalide
-        // (mauvais mot de passe par exemple)
-
         $authenticationUtils = $this->get('security.authentication_utils');
-
 
         return $this->render('AccountBundle:Default:login.html.twig', array(
                     'last_username' => $authenticationUtils->getLastUsername(),
@@ -40,36 +35,61 @@ class LogController extends Controller {
     /**
      * @Route("/gestion" , name = "gestion")
      */
-    public function gestionAction(Request $request) {
-
-        $em = $this->getDoctrine()->getManager();
+    public function gestionAction(Request $request) {//Fonction principale de la page gestion//
+        //Récupération des entités à afficher dans la page gestion//
         $comptes = $this->getDoctrine()->getManager()->getRepository("AccountBundle:User");
         $results_use = $comptes->findAll();
         $marqueur = $this->getDoctrine()->getManager()->getRepository("AccountBundle:PointsVente");
         $results = $marqueur->findAll();
+        $devis = $this->getDoctrine()->getManager()->getRepository("AccountBundle:Devis");
+        $results_devis = $devis->findAll();
+
+        //Instances d'une entité pour créer le formulaire//
 
         $user = new User();
+
+        //Créations d'un formulaire à partir du formType//
+
+        $form_user = $this->get('form.factory')->create(UserType::class, $user);
+
+        return $this->render('AccountBundle:Default:gestion.html.twig', array('form_user' => $form_user->createView(), 'points' => $results, 'users' => $results_use, 'devis' => $results_devis));
+    }
+
+    /**
+     * @Route("/ajoutDevis")
+     */
+    function ajoutDevisAction(Request $request) {//Fonction pour envoyer un devis 
+        $em = $this->getDoctrine()->getManager();
+        $devis = new Devis();
+
+        if ($request->getMethod() == "POST") {
+
+            $file = new UploadedFile($_FILES['devis']['tmp_name'], $_FILES['devis']['name']);
+            $file->move($request->get('select') . "/", $_FILES['devis']['name']);
+
+            $devis->setNom($_FILES['devis']['name']);
+
+            $devis->setDate(new DateTime);
+
+            $devis->setSrc($request->get('select') . "/" . $_FILES['devis']['name']);
+
+            $devis->setProp($request->get('select'));
+
+
+            $em->persist($devis);
+            $em->flush();
+        }
+        return new Response("hgh");
+    }
+
+    /**
+     * @Route("/addPoints")
+     */
+    function AddPointAction(Request $request) {//Fonction pour ajouter un point de repère
+        $em = $this->getDoctrine()->getManager();
         $point = new PointsVente();
 
-        $form = $this->createFormBuilder($user)
-                ->add('Username', TextType::class)
-                ->add('Password')
-                ->add('mail', EmailType::class)
-                ->add('Envoyer', SubmitType::class)
-                ->getForm();
-        $form->handleRequest($request);
-
-        if ($form->isValid()) {
-
-            $user->setSalt("gg");
-
-            $em->persist($user);
-            $em->flush();
-
-            return $this->redirect("gestion");
-        }
-
-        if ($request->getMethod() == 'POST') {
+        if ($request->getMethod() == "POST") {
             $point->setAdresse($request->get('adresse'));
 
             $point->setDescription($request->get('description'));
@@ -78,16 +98,13 @@ class LogController extends Controller {
 
             $em->persist($point);
             $em->flush();
-            return $this->redirect("gestion");
         }
-
-        return $this->render('AccountBundle:Default:gestion.html.twig', array('form' => $form->createView(), 'points' => $results , 'users' => $results_use));
     }
+
     /**
      * @Route("/supprimer/points/{nom}")
      */
-    function deletePointAction($nom) {
-
+    function deletePointAction($nom) {//Fonction pour supprimer un point de repère
         $em = $this->getDoctrine()->getManager();
 
         $repository = $this
@@ -101,12 +118,36 @@ class LogController extends Controller {
         $em->flush();
 
         return $this->redirectToRoute("gestion");
-
     }
+
+    /**
+     * @Route("/ajoutUsers")
+     */
+    function ajoutUsersAction(Request $request) {//Fonction pour ajouter un utilisateur
+        $em = $this->getDoctrine()->getManager();
+        $user = new User();
+
+        if ($request->getMethod() == "POST") {
+
+            $user->setUsername($request->get('username'));
+            $user->setPassword($request->get('password'));
+            $user->setMail($request->get('mail'));
+            $user->setRoles(array('ROLE_USER'));
+            $user->setSalt("");
+
+            $em->persist($user);
+            $em->flush();
+
+            mkdir($user->getUsername());
+        }
+        return new Response("USER");
+    }
+
     /**
      * @Route("/supprimer/users/{nom}")
      */
-    function deleteUserstAction($nom) {
+    function deleteUsersAction($nom) {//Fonction pour supprimer un utilisateur
+        rmdir($nom);
 
         $em = $this->getDoctrine()->getManager();
 
@@ -121,7 +162,28 @@ class LogController extends Controller {
         $em->flush();
 
         return $this->redirectToRoute("gestion");
+    }
 
+    /**
+     * @Route("/modifierPass")
+     */
+    function ModifPassAction(Request $request) {//Fonction pour supprimer un utilisateur
+        $em = $this->getDoctrine()->getManager();
+        $user = new User();
+
+        if ($request->getMethod() == "POST") {
+
+            $comptes = $this->getDoctrine()->getManager()->getRepository("AccountBundle:User");
+            $user = $comptes->findOneBy(array('username' => $request->get('username')));
+
+            if ($request->get('modif_pass_actu') == $user->getPassword() && $request->get('modif_pass_new') == $request->get('modif_pass_new_conf')) {
+                $user->setPassword($request->get('modif_pass_new'));
+                $em->merge($user);
+                $em->flush();
+            }
+        }
+
+        return $this->redirectToRoute("gestion");
     }
 
 }
