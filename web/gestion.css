@@ -1,9 +1,65 @@
-.point_contain{
-   
-    border: 2px solid black ;
-    width: 50% ;
+@font-face {
+  font-family: "titles";
+  src: url("polices/titles.ttf"); }
+@font-face {
+    font-family: "text";
+    src: url('polices/myriad.ttf');
 }
+div{
+    font-family: "text";
+    font-size: 15.365px;//kom lé joure de l'annêr kouzzain :-]
+}
+body{
+    background-color: #FFF0CE ;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+.center{
+    text-align: center;
+}
+.scrollable{
+    margin-bottom: 3%;
+    margin-left: -2.25%;
+    height: 50%;
+    overflow-y: scroll;
+    scroll
+    border-radius: 3px;
+}
+.div-user{
+    border-bottom: 2px solid rgb(174, 15, 9);
+    position: relative;
 
-.suppr{
-    float: right ;
+}
+.div-user .suppr{
+    margin-top: 14px;
+    position:absolute;
+    left: 89.55%;
+}
+input{
+    margin-bottom: 2.5%;
+    cursor: pointer;
+    color:#111;
+}
+.row{
+    border-bottom: 2px solid rgb(174, 15, 9);
+}
+.devis{
+    height: 17%;
+    padding-left: 4%;
+}
+.liste-points{
+    height: 50%;
+    overflow-y: scroll;
+    scroll
+    border-radius: 3px;
+}
+.marg-map{
+    margin-top: 3%;
+}
+h1,
+h2,
+h3{
+    color: rgb(174, 15, 9);
+    font-family: "titles";
 }

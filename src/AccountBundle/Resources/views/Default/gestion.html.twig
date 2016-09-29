@@ -1,9 +1,10 @@
 <body>
-    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
         
         <script src ="../script/modif.js"></script>
-        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
         <link rel="stylesheet" href ="../gestion.css">
     {%if app.user.username == "gast34"%}
         <script src ="../script/generation.js"></script>
@@ -16,25 +17,22 @@
             #map { height: 70%; width:50%}
         </style>
         
-
-
-        Génération : <br>
-        {{form(form_user)}}
+        <div class="row">
+        <div class="col-xs-4 center">
+            <h3>Générer un compte :</h3> <br>
+        {{form(form_user)}}        
+        <input id ="gene" type ="button" value ="Générer un mot de passe"/><br>
         <input id ="ajout" type ="button" value ="Ajouter"/><br>
-        <input id ="gene" type ="button" value ="Générer"/><br>
+        </div>
 
-
-
-        {%set i = 0%}
-        {%for resultats in users %}
+        <div class="col-xs-8 scrollable">
+            {%set i = 0%}
+            {%for resultats in users %}
             {%set i = i + 1%}
 
             {%if i != 1%}
-
-                <div class = "point_contain">
-
+                <div class = "div-user">
                     <a href = "supprimer/users/{{resultats.username}}"><input class="suppr" type="button" value="Supprimer"/></a>
-
                     Nom : {{resultats.username}}<br>
                     Mot de Passe : {{resultats.password}}<br>
                     Email: {{resultats.mail}}<br>
@@ -44,10 +42,14 @@
 
         {%endfor%}
 
+        </div>
+        </div>
 
-
+        <div class="devis row">
         <form id = "envoy" method="post" action="ajoutDevis" enctype="multipart/form-data">
-            Envoyer un devis à <select id = "choix" name="select">
+            <div class="col-xs-5"><h3>Envoyer un devis à:</h3>
+                
+            <select id = "choix" name="select">
 
                 {%set x = 0%}
                 {%for resultats in users%}
@@ -59,25 +61,29 @@
                     {%endif%}
 
                 {%endfor%}
-            </select>
+            </select></div>
 
-            <br><input type="file" id="fichier" name = "devis" /><br>
-            <input type="submit" value ="Envoyer"/>
+            <div class="col-xs-5"><h3>Ajouter un fichier:</h3><input type="file" id="fichier" name = "devis" /></div>
+            <div class="col-xs-2"><h3>Envoyer !</h3><input type="submit" value ="Ok !"/></div>
         </form>
-
-        <br>Mettre Points de ventes :
+</div>
+      <div class="marg-map">   
+        <div class="col-xs-6" id ="map"></div>
+        <div class="col-xs-6">
+        <div class="center">
+        Ajouter un points de vente :
         <input type="text" id="description" placeholder="Déscription du point de vente"/>
         <input type="text" id="adresse" placeholder="Adresse du point de vente"/>
         <input type="button"  value="Localiser sur Google Map" onclick="TrouverAdresse();"/>
-        <div id ="map"></div>
-
+        </div>
         {%set i = 0%}
 
+        <div class="liste-points">
         {%for result in points%}
             {%set i = i + 1%}    
 
             <div class = "point_contain">
-                <a href = "supprimer/points/{{result.description}}"><input class="suppr" type="button" value="Supprimer"/></a>
+                <a href = "supprimer/points/{{result.description}}"><input class="" type="button" value="Supprimer"/></a>
 
                 <div class = "description{{i}}" >
                     {{result.description}}
@@ -96,6 +102,9 @@
             </div>
 
         {%endfor%}
+        </div>
+                </div>
+      </div>
 
         <div id = "val" style="display:none">{{i}}</div>
 
