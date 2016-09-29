@@ -15,8 +15,8 @@ class __TwigTemplate_deb6de7a10dc8757dfde59740fd151f5e96ee2def3e080718fc5fee1502
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_a453fcffe2cc7991ddfaa1b085d92a0c4f3681a7926f0dfcdcc86c176a71685d = $this->env->getExtension("native_profiler");
-        $__internal_a453fcffe2cc7991ddfaa1b085d92a0c4f3681a7926f0dfcdcc86c176a71685d->enter($__internal_a453fcffe2cc7991ddfaa1b085d92a0c4f3681a7926f0dfcdcc86c176a71685d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "mainBundle:Default:index.html.twig"));
+        $__internal_c155569ae5b523a35229c60bdc90ffdc370d5dca72f630c775ff2e5a0a56dc82 = $this->env->getExtension("native_profiler");
+        $__internal_c155569ae5b523a35229c60bdc90ffdc370d5dca72f630c775ff2e5a0a56dc82->enter($__internal_c155569ae5b523a35229c60bdc90ffdc370d5dca72f630c775ff2e5a0a56dc82_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "mainBundle:Default:index.html.twig"));
 
         // line 1
         echo "<html>
@@ -139,7 +139,7 @@ class __TwigTemplate_deb6de7a10dc8757dfde59740fd151f5e96ee2def3e080718fc5fee1502
 
             <!-- Menu de navigation (petites bulles sur la gauche de la vue) -->
             <div class=\"marg-navy\">
-                <ul class=\"navy carousel-indicators\">
+                <ul class=\"navy\">
                     <a class=\"test js-scrollTo\" href = \".prod\">
                         <li class=\"js-scrollTo\"></li>
                     </a>
@@ -173,7 +173,7 @@ class __TwigTemplate_deb6de7a10dc8757dfde59740fd151f5e96ee2def3e080718fc5fee1502
             echo "                        <div class=\"navbar-header\"><span class=\"navbar-brand bonjour\">Bonjour <span class=\"red\">";
             echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "user", array()), "username", array()), "html", null, true);
             echo "</span></span></div>
-                    ";
+                            ";
         }
         // line 109
         echo "                    <ul class=\"nav navbar-nav navbar-right\">
@@ -210,42 +210,41 @@ class __TwigTemplate_deb6de7a10dc8757dfde59740fd151f5e96ee2def3e080718fc5fee1502
                     Boisson du sud de la France, la marquisette est connue dans des départements tels que l'Ardèche, la Drôme et le Gard. Originaires de l'Ardèche, les petits enfants Thibon ont connu la marquisette dans les bals d'été, les mariages, les baptêmes... Il existe autant de recettes que de villages. La recette traditionnelle de leur grand père, n'était autre qu'un subtil mélange de vin blanc, de vin pétillant, de limonade, aux senteurs d'agrumes et de rhum.
                 </p>
                 <!-- vidéo Youtube -->
-                <div class=\"center\">
-                    <div class=\"video-container col-xs-12\">
-                        <iframe src=\"https://www.youtube.com/embed/tWw003p4710\" frameborder=\"0\" width=\"560\" height=\"315\"></iframe>
+                <div class=\"col-xs-offset-2 col-xs-8\">
+                    <div class=\"embed-responsive embed-responsive-16by9\">
+                        <iframe class=\"embed-responsive-item\" src=\"https://www.youtube.com/embed/tWw003p4710\" frameborder=\"0\" width=\"560\" height=\"315\"></iframe>
                     </div>
                 </div>
-
                 <!-- Images des cocktails + plugin lightbox (le js est en fin de code) -->
                 <!-- cocktail 1 -->
                 <div class=\"col-sm-offset-2 col-xs-offset-0 col-xs-12 col-sm-8 col-md-4\">
-                    <a href=\"../img/cocktail1.png\" data-lightbox=\"roadtrip\">
+                    <a href=\"../img/willie1.png\" data-lightbox=\"roadtrip\">
                         <div class=\"sombre\">
-                            <img class=\"img-responsive\" src=\"../img/cocktail1.png\" alt=\"\" />
+                            <img class=\"img-responsive\" src=\"../img/willie1.png\" alt=\"\" />
                         </div>
                     </a>
                 </div>
                 <!-- cocktail 2 -->
                 <div class=\"col-xs-12 col-sm-8 col-sm-offset-2 col-md-offset-0 col-md-4\">
-                    <a href=\"../img/cocktail1.png\" data-lightbox=\"roadtrip\">
+                    <a href=\"../img/willie2.png\" data-lightbox=\"roadtrip\">
                         <div class=\"sombre\">
-                            <img class=\"img-responsive\" src=\"../img/cocktail1.png\" alt=\"\" />
+                            <img class=\"img-responsive\" src=\"../img/willie2.png\" alt=\"\" />
                         </div>
                     </a>
                 </div>
                 <!-- cocktail 3 -->
                 <div class=\"col-sm-offset-2 col-xs-offset-0 col-xs-12 col-sm-8 col-md-4\">
-                    <a href=\"../img/cocktail1.png\" data-lightbox=\"roadtrip\">
+                    <a href=\"../img/bycoss.png\" data-lightbox=\"roadtrip\">
                         <div class=\"sombre\">
-                            <img class=\"img-responsive\" src=\"../img/cocktail1.png\" alt=\"\" />
+                            <img class=\"img-responsive\" src=\"../img/bycoss.png\" alt=\"\" />
                         </div>
                     </a>
                 </div>
                 <!-- cocktail 4 -->
                 <div class=\"col-xs-12 col-sm-8 col-sm-offset-2 col-md-offset-0 col-md-4\">
-                    <a href=\"../img/cocktail1.png\" data-lightbox=\"roadtrip\">
+                    <a href=\"../img/parfum.png\" data-lightbox=\"roadtrip\">
                         <div class=\"sombre\">
-                            <img class=\"img-responsive\" src=\"../img/cocktail1.png\" alt=\"\" />
+                            <img class=\"img-responsive\" src=\"../img/parfum.png\" alt=\"\" />
                         </div>
                     </a>
                 </div>
@@ -280,7 +279,7 @@ class __TwigTemplate_deb6de7a10dc8757dfde59740fd151f5e96ee2def3e080718fc5fee1502
                     <div class=\"marge-img wow fadeIn col-xs-offset-0 col-sm-offset-1 col-xs-12 col-sm-10\"><img class=\"img-responsive\" src=\"../img/qui1.png\" alt=\"\" /></div>
                     <div class=\"marge-img wow fadeIn col-xs-offset-0 col-sm-offset-1 col-xs-12 col-sm-10\"><img class=\"img-responsive\" src=\"../img/qui2.png\" alt=\"\" /></div>
                     <div class=\"marge-img wow fadeIn col-xs-offset-0 col-sm-offset-1 col-xs-12 col-sm-10\"><img class=\"img-responsive\" src=\"../img/qui3.png\" alt=\"\" /></div>
-                    <div class=\"marge-img wow fadeIn col-xs-offset-0 col-sm-offset-1 col-xs-12 col-sm-10\"><img class=\"img-responsive\" src=\"../img/qui2.png\" alt=\"\" /></div>
+                    <div class=\"marge-img wow fadeIn col-xs-offset-0 col-sm-offset-1 col-xs-12 col-sm-10\"><img class=\"img-responsive\" src=\"../img/simonfull.png\" alt=\"\" /></div>
                 </div>
             </section>
             <!-- Fin de la section qui sommes nous ______________________________________-->
@@ -354,7 +353,7 @@ class __TwigTemplate_deb6de7a10dc8757dfde59740fd151f5e96ee2def3e080718fc5fee1502
 </html>
 ";
         
-        $__internal_a453fcffe2cc7991ddfaa1b085d92a0c4f3681a7926f0dfcdcc86c176a71685d->leave($__internal_a453fcffe2cc7991ddfaa1b085d92a0c4f3681a7926f0dfcdcc86c176a71685d_prof);
+        $__internal_c155569ae5b523a35229c60bdc90ffdc370d5dca72f630c775ff2e5a0a56dc82->leave($__internal_c155569ae5b523a35229c60bdc90ffdc370d5dca72f630c775ff2e5a0a56dc82_prof);
 
     }
 
@@ -451,7 +450,7 @@ class __TwigTemplate_deb6de7a10dc8757dfde59740fd151f5e96ee2def3e080718fc5fee1502
 /* */
 /*             <!-- Menu de navigation (petites bulles sur la gauche de la vue) -->*/
 /*             <div class="marg-navy">*/
-/*                 <ul class="navy carousel-indicators">*/
+/*                 <ul class="navy">*/
 /*                     <a class="test js-scrollTo" href = ".prod">*/
 /*                         <li class="js-scrollTo"></li>*/
 /*                     </a>*/
@@ -480,7 +479,7 @@ class __TwigTemplate_deb6de7a10dc8757dfde59740fd151f5e96ee2def3e080718fc5fee1502
 /*                 <div class="container-fluid">*/
 /*                     {%if app.user.username is defined%}*/
 /*                         <div class="navbar-header"><span class="navbar-brand bonjour">Bonjour <span class="red">{{app.user.username}}</span></span></div>*/
-/*                     {%endif%}*/
+/*                             {%endif%}*/
 /*                     <ul class="nav navbar-nav navbar-right">*/
 /*                         {%if app.user.username is defined %}  <li> <a href="gestion"><span class="glyphicon glyphicon-wrench"></span> Gestion</a></li>*/
 /*                             <li><a href="logout"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>*/
@@ -507,42 +506,41 @@ class __TwigTemplate_deb6de7a10dc8757dfde59740fd151f5e96ee2def3e080718fc5fee1502
 /*                     Boisson du sud de la France, la marquisette est connue dans des départements tels que l'Ardèche, la Drôme et le Gard. Originaires de l'Ardèche, les petits enfants Thibon ont connu la marquisette dans les bals d'été, les mariages, les baptêmes... Il existe autant de recettes que de villages. La recette traditionnelle de leur grand père, n'était autre qu'un subtil mélange de vin blanc, de vin pétillant, de limonade, aux senteurs d'agrumes et de rhum.*/
 /*                 </p>*/
 /*                 <!-- vidéo Youtube -->*/
-/*                 <div class="center">*/
-/*                     <div class="video-container col-xs-12">*/
-/*                         <iframe src="https://www.youtube.com/embed/tWw003p4710" frameborder="0" width="560" height="315"></iframe>*/
+/*                 <div class="col-xs-offset-2 col-xs-8">*/
+/*                     <div class="embed-responsive embed-responsive-16by9">*/
+/*                         <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/tWw003p4710" frameborder="0" width="560" height="315"></iframe>*/
 /*                     </div>*/
 /*                 </div>*/
-/* */
 /*                 <!-- Images des cocktails + plugin lightbox (le js est en fin de code) -->*/
 /*                 <!-- cocktail 1 -->*/
 /*                 <div class="col-sm-offset-2 col-xs-offset-0 col-xs-12 col-sm-8 col-md-4">*/
-/*                     <a href="../img/cocktail1.png" data-lightbox="roadtrip">*/
+/*                     <a href="../img/willie1.png" data-lightbox="roadtrip">*/
 /*                         <div class="sombre">*/
-/*                             <img class="img-responsive" src="../img/cocktail1.png" alt="" />*/
+/*                             <img class="img-responsive" src="../img/willie1.png" alt="" />*/
 /*                         </div>*/
 /*                     </a>*/
 /*                 </div>*/
 /*                 <!-- cocktail 2 -->*/
 /*                 <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-offset-0 col-md-4">*/
-/*                     <a href="../img/cocktail1.png" data-lightbox="roadtrip">*/
+/*                     <a href="../img/willie2.png" data-lightbox="roadtrip">*/
 /*                         <div class="sombre">*/
-/*                             <img class="img-responsive" src="../img/cocktail1.png" alt="" />*/
+/*                             <img class="img-responsive" src="../img/willie2.png" alt="" />*/
 /*                         </div>*/
 /*                     </a>*/
 /*                 </div>*/
 /*                 <!-- cocktail 3 -->*/
 /*                 <div class="col-sm-offset-2 col-xs-offset-0 col-xs-12 col-sm-8 col-md-4">*/
-/*                     <a href="../img/cocktail1.png" data-lightbox="roadtrip">*/
+/*                     <a href="../img/bycoss.png" data-lightbox="roadtrip">*/
 /*                         <div class="sombre">*/
-/*                             <img class="img-responsive" src="../img/cocktail1.png" alt="" />*/
+/*                             <img class="img-responsive" src="../img/bycoss.png" alt="" />*/
 /*                         </div>*/
 /*                     </a>*/
 /*                 </div>*/
 /*                 <!-- cocktail 4 -->*/
 /*                 <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-offset-0 col-md-4">*/
-/*                     <a href="../img/cocktail1.png" data-lightbox="roadtrip">*/
+/*                     <a href="../img/parfum.png" data-lightbox="roadtrip">*/
 /*                         <div class="sombre">*/
-/*                             <img class="img-responsive" src="../img/cocktail1.png" alt="" />*/
+/*                             <img class="img-responsive" src="../img/parfum.png" alt="" />*/
 /*                         </div>*/
 /*                     </a>*/
 /*                 </div>*/
@@ -577,7 +575,7 @@ class __TwigTemplate_deb6de7a10dc8757dfde59740fd151f5e96ee2def3e080718fc5fee1502
 /*                     <div class="marge-img wow fadeIn col-xs-offset-0 col-sm-offset-1 col-xs-12 col-sm-10"><img class="img-responsive" src="../img/qui1.png" alt="" /></div>*/
 /*                     <div class="marge-img wow fadeIn col-xs-offset-0 col-sm-offset-1 col-xs-12 col-sm-10"><img class="img-responsive" src="../img/qui2.png" alt="" /></div>*/
 /*                     <div class="marge-img wow fadeIn col-xs-offset-0 col-sm-offset-1 col-xs-12 col-sm-10"><img class="img-responsive" src="../img/qui3.png" alt="" /></div>*/
-/*                     <div class="marge-img wow fadeIn col-xs-offset-0 col-sm-offset-1 col-xs-12 col-sm-10"><img class="img-responsive" src="../img/qui2.png" alt="" /></div>*/
+/*                     <div class="marge-img wow fadeIn col-xs-offset-0 col-sm-offset-1 col-xs-12 col-sm-10"><img class="img-responsive" src="../img/simonfull.png" alt="" /></div>*/
 /*                 </div>*/
 /*             </section>*/
 /*             <!-- Fin de la section qui sommes nous ______________________________________-->*/

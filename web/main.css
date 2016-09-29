@@ -186,6 +186,7 @@ header {
     outline: none; }
 
 .navy li {
+  margin: 2px;
   cursor: pointer;
   border: 2px solid #ae0f09;
   width: 25px;

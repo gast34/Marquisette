@@ -7,7 +7,7 @@
 }
 div{
     font-family: "text";
-    font-size: 15.365px;//kom lé joure de l'annêr kouzzain :-]
+    font-size: 15.365px;
 }
 body{
     background-color: #FFF0CE ;
@@ -23,7 +23,6 @@ body{
     margin-left: -2.25%;
     height: 50%;
     overflow-y: scroll;
-    scroll
     border-radius: 3px;
 }
 .div-user{
