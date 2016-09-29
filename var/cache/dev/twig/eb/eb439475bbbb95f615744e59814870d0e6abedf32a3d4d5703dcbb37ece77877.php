@@ -15,8 +15,8 @@ class __TwigTemplate_deb6de7a10dc8757dfde59740fd151f5e96ee2def3e080718fc5fee1502
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_c155569ae5b523a35229c60bdc90ffdc370d5dca72f630c775ff2e5a0a56dc82 = $this->env->getExtension("native_profiler");
-        $__internal_c155569ae5b523a35229c60bdc90ffdc370d5dca72f630c775ff2e5a0a56dc82->enter($__internal_c155569ae5b523a35229c60bdc90ffdc370d5dca72f630c775ff2e5a0a56dc82_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "mainBundle:Default:index.html.twig"));
+        $__internal_6e7d94b81a8ba21fade5cc3baec16369d295e0eea6d84923afb3e003b75d3200 = $this->env->getExtension("native_profiler");
+        $__internal_6e7d94b81a8ba21fade5cc3baec16369d295e0eea6d84923afb3e003b75d3200->enter($__internal_6e7d94b81a8ba21fade5cc3baec16369d295e0eea6d84923afb3e003b75d3200_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "mainBundle:Default:index.html.twig"));
 
         // line 1
         echo "<html>
@@ -57,7 +57,7 @@ class __TwigTemplate_deb6de7a10dc8757dfde59740fd151f5e96ee2def3e080718fc5fee1502
             ";
         // line 33
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["test"]) ? $context["test"] : $this->getContext($context, "test")));
+        $context['_seq'] = twig_ensure_traversable((isset($context["points"]) ? $context["points"] : $this->getContext($context, "points")));
         foreach ($context['_seq'] as $context["_key"] => $context["result"]) {
             // line 34
             echo "                ";
@@ -353,7 +353,7 @@ class __TwigTemplate_deb6de7a10dc8757dfde59740fd151f5e96ee2def3e080718fc5fee1502
 </html>
 ";
         
-        $__internal_c155569ae5b523a35229c60bdc90ffdc370d5dca72f630c775ff2e5a0a56dc82->leave($__internal_c155569ae5b523a35229c60bdc90ffdc370d5dca72f630c775ff2e5a0a56dc82_prof);
+        $__internal_6e7d94b81a8ba21fade5cc3baec16369d295e0eea6d84923afb3e003b75d3200->leave($__internal_6e7d94b81a8ba21fade5cc3baec16369d295e0eea6d84923afb3e003b75d3200_prof);
 
     }
 
@@ -404,7 +404,7 @@ class __TwigTemplate_deb6de7a10dc8757dfde59740fd151f5e96ee2def3e080718fc5fee1502
 /* */
 /*         {%set i = 0%}*/
 /*         <div style="display:none">*/
-/*             {%for result in test%}*/
+/*             {%for result in points%}*/
 /*                 {%set i = i + 1%}*/
 /* */
 /*                 <div class = "description{{i}}" >*/

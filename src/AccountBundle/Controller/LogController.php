@@ -10,6 +10,7 @@ use DateTime;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -36,7 +37,6 @@ class LogController extends Controller {
      * @Route("/gestion" , name = "gestion")
      */
     public function gestionAction() {//Fonction principale de la page gestion//
-    
         //Récupération des entités à afficher dans la page gestion//
         $comptes = $this->getDoctrine()->getManager()->getRepository("AccountBundle:User");
         $results_use = $comptes->findAll();
@@ -66,7 +66,7 @@ class LogController extends Controller {
         if ($request->getMethod() == "POST") {
 
             $file = new UploadedFile($_FILES['devis']['tmp_name'], $_FILES['devis']['name']);
-            $file->move($request->get('select') . "/", $_FILES['devis']['name']);
+            $file->move($request->get('select') . "/", $_FILES['devis']['name']); //Deplacement du devis dans le bon dossier
 
             $devis->setNom($_FILES['devis']['name']);
 
@@ -79,8 +79,9 @@ class LogController extends Controller {
 
             $em->persist($devis);
             $em->flush();
+            
         }
-        return new Response("hgh");
+        return new Response("Devis bien envoyé !"); //Tout s'est bien passé
     }
 
     /**
@@ -100,6 +101,9 @@ class LogController extends Controller {
             $em->persist($point);
             $em->flush();
         }
+        $response = new JsonResponse(); //Retour des données permettant la construction d'une div point
+        $response->setData(array('adresse' => $point->getAdresse(), 'description' => $point->getDescription()));
+        return $response;
     }
 
     /**
@@ -113,7 +117,7 @@ class LogController extends Controller {
                 ->getManager()
                 ->getRepository('AccountBundle:PointsVente');
 
-        $point = $repository->findOneBy(array('description' => $nom));
+        $point = $repository->findOneBy(array('description' => $nom)); //Récupération du point à supprimer
 
         $em->remove($point);
         $em->flush();
@@ -139,9 +143,13 @@ class LogController extends Controller {
             $em->persist($user);
             $em->flush();
 
-            mkdir($user->getUsername());
+            mkdir($user->getUsername()); //Création du dossier personnel de l'utilisateur
         }
-        return new Response("USER");
+
+        $response = new JsonResponse(); //Retour des données permettant la construction d'une div user
+        $response->setData(array('username' => $user->getUsername(), 'password' => $user->getPassword(), 'mail' => $user->getMail()));
+
+        return $response;
     }
 
     /**
@@ -157,7 +165,7 @@ class LogController extends Controller {
                 ->getManager()
                 ->getRepository('AccountBundle:User');
 
-        $user = $repository->findOneBy(array('username' => $nom));
+        $user = $repository->findOneBy(array('username' => $nom)); //Récupération de l'utilisateur à supprimer
 
         $em->remove($user);
         $em->flush();
@@ -168,7 +176,7 @@ class LogController extends Controller {
     /**
      * @Route("/modifierPass")
      */
-    function ModifPassAction(Request $request) {//Fonction pour supprimer un utilisateur
+    function ModifPassAction(Request $request) {//Fonction pour modifer le mot de passe d'un utilisateur
         $em = $this->getDoctrine()->getManager();
         $user = new User();
 
@@ -181,10 +189,9 @@ class LogController extends Controller {
                 $user->setPassword($request->get('modif_pass_new'));
                 $em->merge($user);
                 $em->flush();
+                return new Response("Votre mot de passe à bien été modifié");
             }
         }
-
-        return $this->redirectToRoute("gestion");
     }
 
 }
