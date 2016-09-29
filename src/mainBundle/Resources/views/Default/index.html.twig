@@ -28,14 +28,14 @@
     </head>
     <body>
 
-        {%if app.user.username is defined %}Bonjour {{app.user.username}} <a href ="logout">Deconnexion</a><a href ="gestion">Gestion</a>  
+        {%if app.user.username is defined %}Bonjour {{app.user.username}} <a href ="logout">Deconnexion</a><a href ="gestion">Gestion</a>
         {%else%}<a href ="connexion">Connexion</a>
         {%endif%}
 
         {%set i = 0%}
         <div style="display:none">
             {%for result in test%}
-                {%set i = i + 1%}    
+                {%set i = i + 1%}
 
                 <div class = "description{{i}}" >
                     {{result.description}}
@@ -47,15 +47,15 @@
                     {{result.longitude}}
                 </div>
                 <div class = "latitude{{i}}">
-                    {{result.latitude}}  
+                    {{result.latitude}}
                 </div>
 
             {%endfor%}
         </div>
 
         <div id = "val" style="display:none">{{i}}</div>
-        
-        
+
+
     <!-- Bordure rouge sur les cotés du site -->
     <div class="border-red">
 
@@ -79,7 +79,7 @@
     <!-- fin du carousel -->
 
 <!-- Menu de navigation (petites bulles sur la gauche de la vue) -->
-<div class="container marg-navy">
+<div class="marg-navy">
   <ul class="navy carousel-indicators">
     <a class="test js-scrollTo" href = ".prod">
       <li class="js-scrollTo"></li>
@@ -209,7 +209,7 @@
          <h1 class="pdv titles center">Point de vente</h1>
 
          <div id="map"></div>
-         
+
        </div>
      </section>
 
