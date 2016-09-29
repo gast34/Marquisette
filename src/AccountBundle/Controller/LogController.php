@@ -35,7 +35,8 @@ class LogController extends Controller {
     /**
      * @Route("/gestion" , name = "gestion")
      */
-    public function gestionAction(Request $request) {//Fonction principale de la page gestion//
+    public function gestionAction() {//Fonction principale de la page gestion//
+    
         //Récupération des entités à afficher dans la page gestion//
         $comptes = $this->getDoctrine()->getManager()->getRepository("AccountBundle:User");
         $results_use = $comptes->findAll();

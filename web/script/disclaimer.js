@@ -30,7 +30,7 @@ if(document.cookie.indexOf("disclaimerok")<=-1)
  +"<\/style>"
  +"<div id='disclaimer'><div id='disclaimer-fond'></div><div id='disclaimer-conteneur'>"
  +"<div id='disclaimer-cadre'>"
- +"<img class='center img-responsive' src='img/majeur_marquisette.png'/>"
+ +"<img class='center img-responsive' src='../img/majeur_marquisette.png'/>"
  +"<div class='boutons'><a href='#' onclick='Entrer(); return(false)'>OUI</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a rel='nofollow' href='http://www.tfou.fr/'>NON</a></div>"
  +"</div>"
  +"</div></div>"
