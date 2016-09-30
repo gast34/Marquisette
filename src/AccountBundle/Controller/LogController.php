@@ -81,7 +81,7 @@ class LogController extends Controller {
             $em->flush();
             
         }
-        return new Response("Devis bien envoyé !"); //Tout s'est bien passé
+        return new JsonResponse(array('fin' => 'Tout s\'est bien passé !'));   //Tout s'est bien passé
     }
 
     /**
