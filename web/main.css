@@ -371,4 +371,16 @@ footer p {
   .endSite {
     padding-top: 7%; } }
 
+
+.reset-dec{
+    color: #f9f9f9;
+}
+.reset-dec:hover{
+    text-decoration: none;
+        color: #a1a1a1;
+}
+.reset-dec:focus{
+    text-decoration: none;
+        color: #f9f9f9;
+}
 /*# sourceMappingURL=main.css.map */

@@ -16,63 +16,84 @@ class __TwigTemplate_a8f145defeea017a6baf722fad4199ec815e40b4506b07ecf6be03d533c
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_a3983025ab12577b3a6ad107029354825feff45f062c2c109981d255d2a2d6e7 = $this->env->getExtension("native_profiler");
-        $__internal_a3983025ab12577b3a6ad107029354825feff45f062c2c109981d255d2a2d6e7->enter($__internal_a3983025ab12577b3a6ad107029354825feff45f062c2c109981d255d2a2d6e7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "AccountBundle:Default:login.html.twig"));
+        $__internal_3e698a418ac04a7916499e6191d628c7c3a7764e47091b8a5aa4a96b4654bf6e = $this->env->getExtension("native_profiler");
+        $__internal_3e698a418ac04a7916499e6191d628c7c3a7764e47091b8a5aa4a96b4654bf6e->enter($__internal_3e698a418ac04a7916499e6191d628c7c3a7764e47091b8a5aa4a96b4654bf6e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "AccountBundle:Default:login.html.twig"));
 
-        // line 2
-        echo "test
+        // line 1
+        echo "<!DOCTYPE html>
+<html lang=\"fr\">
+    <head>
+        <meta charset=\"utf-8\">
+        <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">
+        <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css\">
+        <link rel=\"stylesheet\" type=\"text/css\" href=\"../login.css\"/>
+        
+";
+        // line 9
+        $this->displayBlock('body', $context, $blocks);
+        // line 39
+        echo "
+
+
+
+</html>
 
 ";
-        // line 4
-        $this->displayBlock('body', $context, $blocks);
         
-        $__internal_a3983025ab12577b3a6ad107029354825feff45f062c2c109981d255d2a2d6e7->leave($__internal_a3983025ab12577b3a6ad107029354825feff45f062c2c109981d255d2a2d6e7_prof);
+        $__internal_3e698a418ac04a7916499e6191d628c7c3a7764e47091b8a5aa4a96b4654bf6e->leave($__internal_3e698a418ac04a7916499e6191d628c7c3a7764e47091b8a5aa4a96b4654bf6e_prof);
 
     }
 
+    // line 9
     public function block_body($context, array $blocks = array())
     {
-        $__internal_cfe922d726d15dfc48e77584a2f309b54a1b3b72df2cc7fbc139f1ec7518b2dc = $this->env->getExtension("native_profiler");
-        $__internal_cfe922d726d15dfc48e77584a2f309b54a1b3b72df2cc7fbc139f1ec7518b2dc->enter($__internal_cfe922d726d15dfc48e77584a2f309b54a1b3b72df2cc7fbc139f1ec7518b2dc_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_6c716b29b8123de366e5f0261b558f180c1c3cd7f1b5a1f5f77c5dc75e456daa = $this->env->getExtension("native_profiler");
+        $__internal_6c716b29b8123de366e5f0261b558f180c1c3cd7f1b5a1f5f77c5dc75e456daa->enter($__internal_6c716b29b8123de366e5f0261b558f180c1c3cd7f1b5a1f5f77c5dc75e456daa_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
-        // line 5
-        echo "    
-    <body>
-
-  ";
-        // line 9
-        echo "  ";
+        // line 10
+        echo "
+<body>
+        <div class=\"logo_center\">
+        <a href=\"http://lamarquisette.fr\"><img class=\"img-responsive\" src=\"../img/marquisette_logo.png\"/></a>
+        </div>
+        <div class=\"login\">
+            <div class=\"bienvenue\">
+                <h2>Compte client</h2>
+                ";
+        // line 18
         if ((isset($context["error"]) ? $context["error"] : $this->getContext($context, "error"))) {
-            // line 10
-            echo "    <div class=\"alert alert-danger\">";
+            // line 19
+            echo "                    <div class=\"alert alert-danger\">";
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["error"]) ? $context["error"] : $this->getContext($context, "error")), "message", array()), "html", null, true);
             echo "</div>
-  ";
+                ";
         }
-        // line 12
-        echo "
-  ";
-        // line 14
-        echo "  <form action=\"";
+        // line 21
+        echo "                <form action=\"";
         echo $this->env->getExtension('routing')->getPath("login_check");
         echo "\" method=\"post\">
-    <label for=\"username\">Login :</label>
-    <input type=\"text\" id=\"username\" name=\"_username\" value=\"";
-        // line 16
-        echo twig_escape_filter($this->env, (isset($context["last_username"]) ? $context["last_username"] : $this->getContext($context, "last_username")), "html", null, true);
-        echo "\" />
 
-    <label for=\"password\">Mot de passe :</label>
-    <input type=\"password\" id=\"password\" name=\"_password\" />
-    <br />
-    <input type=\"submit\" value=\"Connexion\" />
-  </form>
-    
+                    <div class=\"input-group input-group-lg\">
+                        <span class=\"input-group-addon\"><i class=\"fa fa-user\"></i></span>
+                        <input type=\"text\" class=\"form-control\" name=\"_username\" placeholder=\"Identifiant\" value=\"";
+        // line 25
+        echo twig_escape_filter($this->env, (isset($context["last_username"]) ? $context["last_username"] : $this->getContext($context, "last_username")), "html", null, true);
+        echo "\">
+                    </div>
+
+                    <div class=\"input-group input-group-lg\">
+                        <span class=\"input-group-addon\"><i class=\"fa fa-lock\"></i></span>
+                        <input type=\"password\" class=\"form-control\" name=\"_password\" placeholder=\"Mot de passe\">
+                    </div>
+                    <button type=\"submit\" class=\"float\">Se connecter</button>
+                </form>
+            </div>
+        </div>
     </body>
 
 ";
         
-        $__internal_cfe922d726d15dfc48e77584a2f309b54a1b3b72df2cc7fbc139f1ec7518b2dc->leave($__internal_cfe922d726d15dfc48e77584a2f309b54a1b3b72df2cc7fbc139f1ec7518b2dc_prof);
+        $__internal_6c716b29b8123de366e5f0261b558f180c1c3cd7f1b5a1f5f77c5dc75e456daa->leave($__internal_6c716b29b8123de366e5f0261b558f180c1c3cd7f1b5a1f5f77c5dc75e456daa_prof);
 
     }
 
@@ -83,32 +104,51 @@ class __TwigTemplate_a8f145defeea017a6baf722fad4199ec815e40b4506b07ecf6be03d533c
 
     public function getDebugInfo()
     {
-        return array (  62 => 16,  56 => 14,  53 => 12,  47 => 10,  44 => 9,  39 => 5,  27 => 4,  23 => 2,);
+        return array (  80 => 25,  72 => 21,  66 => 19,  64 => 18,  54 => 10,  48 => 9,  35 => 39,  33 => 9,  23 => 1,);
     }
 }
-/* {# empty Twig template #}*/
-/* test*/
-/* */
+/* <!DOCTYPE html>*/
+/* <html lang="fr">*/
+/*     <head>*/
+/*         <meta charset="utf-8">*/
+/*         <meta http-equiv="X-UA-Compatible" content="IE=edge">*/
+/*         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">*/
+/*         <link rel="stylesheet" type="text/css" href="../login.css"/>*/
+/*         */
 /* {% block body %}*/
-/*     */
-/*     <body>*/
 /* */
-/*   {# S'il y a une erreur, on l'affiche dans un joli cadre #}*/
-/*   {% if error %}*/
-/*     <div class="alert alert-danger">{{ error.message }}</div>*/
-/*   {% endif %}*/
+/* <body>*/
+/*         <div class="logo_center">*/
+/*         <a href="http://lamarquisette.fr"><img class="img-responsive" src="../img/marquisette_logo.png"/></a>*/
+/*         </div>*/
+/*         <div class="login">*/
+/*             <div class="bienvenue">*/
+/*                 <h2>Compte client</h2>*/
+/*                 {% if error %}*/
+/*                     <div class="alert alert-danger">{{ error.message }}</div>*/
+/*                 {% endif %}*/
+/*                 <form action="{{ path('login_check') }}" method="post">*/
 /* */
-/*   {# Le formulaire, avec URL de soumission vers la route « login_check » comme on l'a vu #}*/
-/*   <form action="{{ path('login_check') }}" method="post">*/
-/*     <label for="username">Login :</label>*/
-/*     <input type="text" id="username" name="_username" value="{{ last_username }}" />*/
+/*                     <div class="input-group input-group-lg">*/
+/*                         <span class="input-group-addon"><i class="fa fa-user"></i></span>*/
+/*                         <input type="text" class="form-control" name="_username" placeholder="Identifiant" value="{{ last_username }}">*/
+/*                     </div>*/
 /* */
-/*     <label for="password">Mot de passe :</label>*/
-/*     <input type="password" id="password" name="_password" />*/
-/*     <br />*/
-/*     <input type="submit" value="Connexion" />*/
-/*   </form>*/
-/*     */
+/*                     <div class="input-group input-group-lg">*/
+/*                         <span class="input-group-addon"><i class="fa fa-lock"></i></span>*/
+/*                         <input type="password" class="form-control" name="_password" placeholder="Mot de passe">*/
+/*                     </div>*/
+/*                     <button type="submit" class="float">Se connecter</button>*/
+/*                 </form>*/
+/*             </div>*/
+/*         </div>*/
 /*     </body>*/
 /* */
 /* {% endblock %}*/
+/* */
+/* */
+/* */
+/* */
+/* </html>*/
+/* */
+/* */

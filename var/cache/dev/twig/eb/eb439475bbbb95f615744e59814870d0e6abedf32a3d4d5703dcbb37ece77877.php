@@ -15,8 +15,8 @@ class __TwigTemplate_deb6de7a10dc8757dfde59740fd151f5e96ee2def3e080718fc5fee1502
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_6e7d94b81a8ba21fade5cc3baec16369d295e0eea6d84923afb3e003b75d3200 = $this->env->getExtension("native_profiler");
-        $__internal_6e7d94b81a8ba21fade5cc3baec16369d295e0eea6d84923afb3e003b75d3200->enter($__internal_6e7d94b81a8ba21fade5cc3baec16369d295e0eea6d84923afb3e003b75d3200_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "mainBundle:Default:index.html.twig"));
+        $__internal_0cbf939d1eb51ad0f12723fb8f9e0b1da70856585a1ea06167c73f68a36b4d5a = $this->env->getExtension("native_profiler");
+        $__internal_0cbf939d1eb51ad0f12723fb8f9e0b1da70856585a1ea06167c73f68a36b4d5a->enter($__internal_0cbf939d1eb51ad0f12723fb8f9e0b1da70856585a1ea06167c73f68a36b4d5a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "mainBundle:Default:index.html.twig"));
 
         // line 1
         echo "<html>
@@ -242,9 +242,9 @@ class __TwigTemplate_deb6de7a10dc8757dfde59740fd151f5e96ee2def3e080718fc5fee1502
                 </div>
                 <!-- cocktail 4 -->
                 <div class=\"col-xs-12 col-sm-8 col-sm-offset-2 col-md-offset-0 col-md-4\">
-                    <a href=\"../img/parfum.png\" data-lightbox=\"roadtrip\">
+                    <a href=\"../img/parfum2.png\" data-lightbox=\"roadtrip\">
                         <div class=\"sombre\">
-                            <img class=\"img-responsive\" src=\"../img/parfum.png\" alt=\"\" />
+                            <img class=\"img-responsive\" src=\"../img/parfum2.png\" alt=\"\" />
                         </div>
                     </a>
                 </div>
@@ -341,7 +341,7 @@ class __TwigTemplate_deb6de7a10dc8757dfde59740fd151f5e96ee2def3e080718fc5fee1502
                     06 99 79 64 13
                 </p>
                 <p>
-                    © Vincent Feger / Perle Estru / Gaston Saboy / beWeb
+                    © <a target=\"_blank\" class=\"reset-dec\" href=\"http://vince-feger.com\">Vincent Feger</a> / <a target=\"_blank\" class=\"reset-dec\" href=\"http://behance.net/perleestru\">Perle Estru</a> / <a target=\"_blank\" class=\"reset-dec\" href=\"http://www.gastonsaboy.com\">Gaston Saboy</a> / beWeb
                 </p>
             </footer>
         </div>
@@ -353,7 +353,7 @@ class __TwigTemplate_deb6de7a10dc8757dfde59740fd151f5e96ee2def3e080718fc5fee1502
 </html>
 ";
         
-        $__internal_6e7d94b81a8ba21fade5cc3baec16369d295e0eea6d84923afb3e003b75d3200->leave($__internal_6e7d94b81a8ba21fade5cc3baec16369d295e0eea6d84923afb3e003b75d3200_prof);
+        $__internal_0cbf939d1eb51ad0f12723fb8f9e0b1da70856585a1ea06167c73f68a36b4d5a->leave($__internal_0cbf939d1eb51ad0f12723fb8f9e0b1da70856585a1ea06167c73f68a36b4d5a_prof);
 
     }
 
@@ -538,9 +538,9 @@ class __TwigTemplate_deb6de7a10dc8757dfde59740fd151f5e96ee2def3e080718fc5fee1502
 /*                 </div>*/
 /*                 <!-- cocktail 4 -->*/
 /*                 <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-offset-0 col-md-4">*/
-/*                     <a href="../img/parfum.png" data-lightbox="roadtrip">*/
+/*                     <a href="../img/parfum2.png" data-lightbox="roadtrip">*/
 /*                         <div class="sombre">*/
-/*                             <img class="img-responsive" src="../img/parfum.png" alt="" />*/
+/*                             <img class="img-responsive" src="../img/parfum2.png" alt="" />*/
 /*                         </div>*/
 /*                     </a>*/
 /*                 </div>*/
@@ -637,7 +637,7 @@ class __TwigTemplate_deb6de7a10dc8757dfde59740fd151f5e96ee2def3e080718fc5fee1502
 /*                     06 99 79 64 13*/
 /*                 </p>*/
 /*                 <p>*/
-/*                     © Vincent Feger / Perle Estru / Gaston Saboy / beWeb*/
+/*                     © <a target="_blank" class="reset-dec" href="http://vince-feger.com">Vincent Feger</a> / <a target="_blank" class="reset-dec" href="http://behance.net/perleestru">Perle Estru</a> / <a target="_blank" class="reset-dec" href="http://www.gastonsaboy.com">Gaston Saboy</a> / beWeb*/
 /*                 </p>*/
 /*             </footer>*/
 /*         </div>*/
