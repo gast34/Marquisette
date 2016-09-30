@@ -1,1 +1,3 @@
-715612,127.0.0.1,GET,http://localhost/Marquisette/web/app_dev.php/Marquis,1475226898,,200
+d95ced,127.0.0.1,GET,http://localhost/Marquisette/web/app_dev.php/,1475228280,4e1faa,200
+4e1faa,127.0.0.1,GET,http://localhost/Marquisette/web/app_dev.php/,1475228280,,404
+bd8c85,127.0.0.1,GET,http://localhost/Marquisette/web/app_dev.php/Marquis,1475228286,,200
