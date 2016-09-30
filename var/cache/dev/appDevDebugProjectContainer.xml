@@ -80,7 +80,11 @@
     <parameter key="debug.container.dump">/var/www/html/Marquisette/var/cache/dev/appDevDebugProjectContainer.xml</parameter>
     <parameter key="security.authentication.trust_resolver.anonymous_class">Symfony\Component\Security\Core\Authentication\Token\AnonymousToken</parameter>
     <parameter key="security.authentication.trust_resolver.rememberme_class">Symfony\Component\Security\Core\Authentication\Token\RememberMeToken</parameter>
-    <parameter key="security.role_hierarchy.roles" type="collection"/>
+    <parameter key="security.role_hierarchy.roles" type="collection">
+      <parameter key="ROLE_ADMIN" type="collection">
+        <parameter>ROLE_USER</parameter>
+      </parameter>
+    </parameter>
     <parameter key="security.access.denied_url">null</parameter>
     <parameter key="security.authentication.manager.erase_credentials">true</parameter>
     <parameter key="security.authentication.session_strategy.strategy">migrate</parameter>
@@ -488,7 +492,11 @@
                   <tag name="cache.pool"/>
                   <argument>rCCQAV8cmR</argument>
                   <argument>0</argument>
+<<<<<<< HEAD
                   <argument>-JU7XW9B9nFV01bxwDa7GQ</argument>
+=======
+                  <argument>roDr+Mriw6w9l4OSVEGHiQ</argument>
+>>>>>>> origin/master
                   <argument>/var/www/html/Marquisette/var/cache/dev/pools</argument>
                   <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
                   <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -501,7 +509,11 @@
                   <tag name="cache.pool"/>
                   <argument>GjjJt6qAJ5</argument>
                   <argument>0</argument>
+<<<<<<< HEAD
                   <argument>-JU7XW9B9nFV01bxwDa7GQ</argument>
+=======
+                  <argument>roDr+Mriw6w9l4OSVEGHiQ</argument>
+>>>>>>> origin/master
                   <argument>/var/www/html/Marquisette/var/cache/dev/pools</argument>
                   <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
                   <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -833,7 +845,11 @@
       <tag name="cache.pool"/>
       <argument>qjwP1hTSUO</argument>
       <argument>0</argument>
+<<<<<<< HEAD
       <argument>-JU7XW9B9nFV01bxwDa7GQ</argument>
+=======
+      <argument>roDr+Mriw6w9l4OSVEGHiQ</argument>
+>>>>>>> origin/master
       <argument>/var/www/html/Marquisette/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -1578,7 +1594,11 @@
         </argument>
         <argument type="service">
           <service class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
+<<<<<<< HEAD
             <argument>57ee2cbc9d3724.60292804</argument>
+=======
+            <argument>57ee229de21288.56339613</argument>
+>>>>>>> origin/master
           </service>
         </argument>
       </argument>
@@ -1595,7 +1615,11 @@
       <argument type="service" id="request_stack"/>
     </service>
     <service id="security.role_hierarchy" class="Symfony\Component\Security\Core\Role\RoleHierarchy" public="false">
-      <argument type="collection"/>
+      <argument type="collection">
+        <argument key="ROLE_ADMIN" type="collection">
+          <argument>ROLE_USER</argument>
+        </argument>
+      </argument>
     </service>
     <service id="security.firewall" class="Symfony\Component\Security\Http\Firewall">
       <tag name="kernel.event_subscriber"/>
@@ -1657,8 +1681,9 @@
       <call method="setVoters">
         <argument type="collection">
           <argument type="service">
-            <service class="Symfony\Component\Security\Core\Authorization\Voter\RoleVoter" public="false">
+            <service class="Symfony\Component\Security\Core\Authorization\Voter\RoleHierarchyVoter" public="false">
               <tag name="security.voter" priority="245"/>
+              <argument type="service" id="security.role_hierarchy"/>
             </service>
           </argument>
           <argument type="service">
@@ -1849,7 +1874,11 @@
         <argument type="service">
           <service class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
             <argument type="service" id="security.token_storage"/>
+<<<<<<< HEAD
             <argument>57ee2cbc9d3724.60292804</argument>
+=======
+            <argument>57ee229de21288.56339613</argument>
+>>>>>>> origin/master
             <argument type="service" id="monolog.logger.security" on-invalid="null"/>
             <argument type="service" id="security.authentication.manager"/>
           </service>
